@@ -7,7 +7,6 @@ import AnimatedImage from '../components/ui/AnimatedImage';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import WordReveal from '../components/ui/WordReveal';
 import ScrollingImageGrid from '../components/ui/ScrollingImageGrid';
-import PartnerCarousel from '../components/ui/PartnerCarousel';
 import OrganicBlob from '../components/ui/OrganicBlob';
 import MagneticButton from '../components/ui/MagneticButton';
 import { imageZoomOutReveal } from '../utils/customAnimations';
@@ -103,14 +102,7 @@ export default function Home() {
       category: 'Afforestation',
       link: '/projects/laksha-vruksha'
     },
-    {
-      title: 'Devara Kere Restoration',
-      description: 'Bringing life back to a historic lake ecosystem.',
-      image: '/assets/Project_lake_restoration.avif',
-      date: 'Feb 10, 2025',
-      category: 'Lake Restoration',
-      link: '/projects/devara-kere-restoration'
-    }
+
   ];
 
   const services = [
@@ -306,7 +298,17 @@ export default function Home() {
               TRUSTED BY
             </h3>
           </ScrollReveal>
-          <PartnerCarousel partners={partners} />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-70">
+            {partners.map((partner, index) => (
+              <div key={index} className="w-32 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section >
 

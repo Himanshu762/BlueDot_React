@@ -6,7 +6,7 @@ import Projects from './pages/Projects'
 import Services from './pages/Services'
 
 // Project detail pages
-import DevaraKere from './pages/projects/DevaraKere'
+
 import EcoSavaari from './pages/projects/EcoSavaari'
 import LakshaVruksha from './pages/projects/LakshaVruksha'
 import MangrovePlantation from './pages/projects/MangrovePlantation'
@@ -24,7 +24,7 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/projects" element={<Projects />} />
-      <Route path="/projects/devara-kere-restoration" element={<DevaraKere />} />
+
       <Route path="/projects/eco-savaari" element={<EcoSavaari />} />
       <Route path="/projects/laksha-vruksha" element={<LakshaVruksha />} />
       <Route path="/projects/mangrove-plantation-chennai" element={<MangrovePlantation />} />

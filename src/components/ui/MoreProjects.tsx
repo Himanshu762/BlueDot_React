@@ -38,14 +38,7 @@ const allProjects = [
         description: 'Restoring ecosystems one native tree at a time.',
         image: '/assets/Home_Portfolio_Vruksha.avif'
     },
-    {
-        id: 'devara-kere-restoration',
-        category: 'Lake Restoration',
-        date: 'May 11, 2025',
-        title: 'Lake Restoration',
-        description: 'Restoring nature to fight the climate crisis head-on.',
-        image: '/assets/Home_project_lake.webp'
-    }
+
 ];
 
 interface MoreProjectsProps {
