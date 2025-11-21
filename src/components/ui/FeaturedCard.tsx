@@ -7,6 +7,7 @@ import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { cardHover, imageHover } from '../../utils/animations'
 import OrbitingCard from './OrbitingCard'
+import { getCategoryColor, categoryTextColor } from '../../utils/projectStyles'
 
 interface FeaturedCardProps {
   title: string
@@ -195,7 +196,13 @@ export function CompactCard({
                 <span className="text-xs text-[rgb(94,107,100)]">{date}</span>
               )}
               {date && (
-                <span className="px-3 py-1 bg-[rgb(243,235,212)] text-[rgb(19,38,27)] text-xs rounded-full font-semibold">
+                <span
+                  className="px-3 py-1 text-xs rounded-full font-semibold"
+                  style={{
+                    backgroundColor: getCategoryColor(category || ''),
+                    color: categoryTextColor
+                  }}
+                >
                   {category}
                 </span>
               )}

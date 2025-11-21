@@ -5,7 +5,7 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { orbitingEarth, arrowLockToNW, zoomOutOnScroll, zoomInOnHover } from '../../utils/customAnimations'
 
 interface OrbitingCardProps {

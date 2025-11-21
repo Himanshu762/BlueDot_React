@@ -12,7 +12,7 @@ export const cubeFlip = {
     rotateX: 90,
     transition: {
       duration: 0.3,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: [0.25, 0.1, 0.25, 1] as const,
     },
   },
 }
@@ -30,7 +30,7 @@ export const tumblingArrow = {
     y: [0, -2, 0, 2, 0],
     transition: {
       duration: 0.6,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
       times: [0, 0.25, 0.5, 0.75, 1],
     },
   },
@@ -42,7 +42,7 @@ export const orbitingEarth = {
     rotate: 360,
     transition: {
       duration: 8,
-      ease: "linear",
+      ease: "linear" as const,
       repeat: Infinity,
     },
   },
@@ -60,7 +60,7 @@ export const arrowLockToNW = {
     y: "-50%",
     transition: {
       duration: 0.4,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: [0.25, 0.1, 0.25, 1] as const,
     },
   },
 }
@@ -71,14 +71,14 @@ export const plusToMinus = {
     rotate: 0,
     transition: {
       duration: 0.3,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: [0.25, 0.1, 0.25, 1] as const,
     },
   },
   minus: {
     rotate: 135, // Spins to create minus appearance
     transition: {
       duration: 0.3,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: [0.25, 0.1, 0.25, 1] as const,
     },
   },
 }
@@ -97,7 +97,7 @@ export const wordReveal = (index: number) => ({
     transition: {
       delay: index * 0.1,
       duration: 0.6,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: [0.25, 0.1, 0.25, 1] as const,
     },
   },
 })
@@ -114,7 +114,7 @@ export const alternatingScroll = (index: number, direction: 'left' | 'right') =>
     transition: {
       delay: index * 0.15,
       duration: 0.8,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: [0.25, 0.1, 0.25, 1] as const,
     },
   },
 })
@@ -125,9 +125,9 @@ export const scrollingPill = (direction: 'left' | 'right') => ({
     x: direction === 'left' ? [0, -20, 0] : [0, 20, 0],
     transition: {
       duration: 2,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
       repeat: Infinity,
-      repeatType: "reverse",
+      repeatType: "reverse" as const,
     },
   },
 })
@@ -203,7 +203,7 @@ export const zoomOutOnScroll = {
     opacity: 1,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: [0.25, 0.1, 0.25, 1] as const,
     },
   },
 }
@@ -216,7 +216,7 @@ export const zoomInOnHover = {
     scale: 1.05,
     transition: {
       duration: 0.3,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: [0.25, 0.1, 0.25, 1] as const,
     },
   },
 }
@@ -234,7 +234,7 @@ export const blurSlideUp = {
     filter: "blur(0px)",
     transition: {
       duration: 0.7,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: [0.25, 0.1, 0.25, 1] as const,
     },
   },
 }
@@ -250,7 +250,7 @@ export const heroDropDown = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: [0.25, 0.1, 0.25, 1] as const,
     },
   },
 }

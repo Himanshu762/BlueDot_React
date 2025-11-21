@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import AnimatedImage from '../components/ui/AnimatedImage';
 import CtaSection from '../components/ui/CTASection';
+import { getCategoryColor, categoryTextColor } from '../utils/projectStyles';
 
 // A card component styled to match the design
 function ProjectCard({ title, description, image, date, category, link }: {
@@ -31,7 +32,13 @@ function ProjectCard({ title, description, image, date, category, link }: {
         </div>
         <div className="mt-4">
           <div className="flex items-center gap-3 mb-3">
-            <span className="px-3 py-1 bg-[rgba(243,235,212,0.8)] text-[rgb(19,38,27)] text-xs rounded-full font-semibold border border-[rgba(19,38,27,0.1)]">
+            <span
+              className="px-3 py-1 text-xs rounded-full font-semibold"
+              style={{
+                backgroundColor: getCategoryColor(category),
+                color: categoryTextColor
+              }}
+            >
               {category}
             </span>
             <span className="text-xs text-[rgb(94,107,100)]">{date}</span>

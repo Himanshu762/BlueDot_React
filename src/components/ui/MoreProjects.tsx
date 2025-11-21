@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import AnimatedImage from './AnimatedImage';
 import ScrollReveal from './ScrollReveal';
+import { getCategoryColor, categoryTextColor } from '../../utils/projectStyles';
 
 // Shared projects data
 const allProjects = [
@@ -80,7 +81,13 @@ export default function MoreProjects({ currentProjectId }: MoreProjectsProps) {
                                         />
                                     </div>
                                     <div className="flex items-center gap-3 mb-2">
-                                        <span className="px-3 py-1 bg-[rgba(164,142,105,0.2)] text-[rgb(19,38,27)] text-xs rounded-full font-semibold">
+                                        <span
+                                            className="px-3 py-1 text-xs rounded-full font-semibold"
+                                            style={{
+                                                backgroundColor: getCategoryColor(project.category),
+                                                color: categoryTextColor
+                                            }}
+                                        >
                                             {project.category}
                                         </span>
                                         <span className="text-xs text-[rgb(94,107,100)]">{project.date}</span>

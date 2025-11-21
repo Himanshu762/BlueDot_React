@@ -4,7 +4,7 @@
  */
 
 import { motion } from 'framer-motion'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { tumblingArrow } from '../../utils/customAnimations'
 
 interface TumblingArrowButtonProps {

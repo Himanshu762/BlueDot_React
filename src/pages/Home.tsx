@@ -11,6 +11,7 @@ import PartnerCarousel from '../components/ui/PartnerCarousel';
 import OrganicBlob from '../components/ui/OrganicBlob';
 import MagneticButton from '../components/ui/MagneticButton';
 import { imageZoomOutReveal } from '../utils/customAnimations';
+import { getCategoryColor, categoryTextColor } from '../utils/projectStyles';
 
 // Enhanced Project Card
 function ProjectCard({ title, description, image, date, category, link }: {
@@ -41,7 +42,13 @@ function ProjectCard({ title, description, image, date, category, link }: {
         </div>
         <div className="p-6">
           <div className="flex items-center gap-3 mb-3">
-            <span className="px-3 py-1.5 bg-gradient-to-r from-golden-500 to-golden-600 text-white text-xs rounded-full font-semibold shadow-sm">
+            <span
+              className="px-3 py-1.5 text-xs rounded-full font-semibold shadow-sm"
+              style={{
+                backgroundColor: getCategoryColor(category),
+                color: categoryTextColor
+              }}
+            >
               {category}
             </span>
             <span className="text-xs text-forest-light font-medium">{date}</span>
