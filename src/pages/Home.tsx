@@ -265,7 +265,7 @@ export default function Home() {
       </section >
 
       {/* About Us Section with Word Reveal */}
-      < section className="relative py-20 bg-background overflow-hidden" >
+      < section className="relative py-32 bg-background overflow-hidden" >
         <OrganicBlob color="golden" position="bottom-right" size="lg" opacity={0.1} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -277,7 +277,7 @@ export default function Home() {
 
             <WordReveal
               text="We are a Bangalore-based non-profit organization dedicated to healing Earth's blue ecosystems through grassroots environmental action that delivers real measurable impact"
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-forest mt-6 mb-12 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-forest mt-12 mb-20 leading-tight"
               as="h2"
             />
 
@@ -291,12 +291,15 @@ export default function Home() {
       </section >
 
       {/* Trusted By Section */}
-      < section className="py-16 bg-background-light" >
+      < section className="py-32 bg-background-light" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fadeIn">
-            <h3 className="text-center text-sm font-semibold text-forest-light uppercase tracking-widest mb-16">
-              TRUSTED BY
-            </h3>
+            <div className="flex flex-col items-center mb-24">
+              <div className="h-16 w-px bg-forest-light/20 mb-8"></div>
+              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide">
+                TRUSTED BY
+              </span>
+            </div>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-70">
             {partners.map((partner, index) => (
