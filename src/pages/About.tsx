@@ -294,16 +294,21 @@ export default function About() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-white/30 backdrop-blur-md border border-white/20 p-3 rounded-lg flex items-center gap-4 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white/30 backdrop-blur-md border border-white/20 rounded-xl flex items-center shadow-lg hover:shadow-xl transition-shadow overflow-hidden h-32"
               >
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-14 h-14 object-cover rounded-xl"
+                  className="w-32 h-full object-cover"
                 />
-                <h4 className="font-bold text-[rgb(19,38,27)] text-lg">
-                  {member.name}
-                </h4>
+                <div className="p-4">
+                  <h4 className="font-bold text-[rgb(19,38,27)] text-lg">
+                    {member.name}
+                  </h4>
+                  <p className="text-sm text-[rgb(94,107,100)] font-medium">
+                    {member.role}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>

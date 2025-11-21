@@ -16,19 +16,19 @@ export default function ScrollingImageGrid({ images, className = '' }: Scrolling
     });
 
     // Adjusted scroll range for better visibility
-    const yLeft = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
-    const yRight = useTransform(scrollYProgress, [0, 1], ["-20%", "0%"]);
+    const yLeft = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
+    const yRight = useTransform(scrollYProgress, [0, 1], ["-15%", "0%"]);
 
     // Split images
     const leftImages = images.slice(0, 3);
     const rightImages = images.slice(3, 6);
 
     return (
-        <div ref={containerRef} className={`grid grid-cols-2 gap-6 h-[500px] overflow-hidden px-8 ${className}`}>
+        <div ref={containerRef} className={`grid grid-cols-2 gap-[2px] h-[500px] overflow-hidden px-8 ${className}`}>
             {/* Left Column - Scrolls UP */}
             <div className="relative h-[150%] -top-[10%]">
                 <motion.div
-                    className="flex flex-col gap-6"
+                    className="flex flex-col gap-[1px]"
                     style={{ y: yLeft }}
                 >
                     {leftImages.map((image, index) => (
@@ -47,7 +47,7 @@ export default function ScrollingImageGrid({ images, className = '' }: Scrolling
             {/* Right Column - Scrolls DOWN */}
             <div className="relative h-[150%] -top-[25%]">
                 <motion.div
-                    className="flex flex-col gap-6"
+                    className="flex flex-col gap-[1px]"
                     style={{ y: yRight }}
                 >
                     {rightImages.map((image, index) => (

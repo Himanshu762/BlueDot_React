@@ -21,8 +21,9 @@ function ProjectCard({ title, description, image, date, category, link }: {
       <motion.div
         whileHover={{ y: -8 }}
         transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+        className="bg-white/30 backdrop-blur-md border border-white/20 rounded-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all h-full flex flex-col"
       >
-        <div className="bg-white/30 backdrop-blur-md border border-white/20 overflow-hidden rounded-xl shadow-xl group-hover:shadow-2xl transition-shadow">
+        <div className="overflow-hidden aspect-video">
           <AnimatedImage
             src={image}
             alt={title}
@@ -30,7 +31,7 @@ function ProjectCard({ title, description, image, date, category, link }: {
             aspectRatio="video"
           />
         </div>
-        <div className="mt-4">
+        <div className="p-6 flex-1 flex flex-col">
           <div className="flex items-center gap-3 mb-3">
             <span
               className="px-3 py-1 text-xs rounded-full font-semibold"

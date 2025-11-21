@@ -61,10 +61,10 @@ export default function Services() {
               <ScrollReveal key={service.id} variant="slideUp" delay={index * 0.1}>
                 <Link to={service.link} className="group">
                   <div
-                    className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center`}
+                    className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white/30 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all`}
                   >
                     <div className={` ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                      <div className="rounded-xl overflow-hidden shadow-2xl bg-white/30 backdrop-blur-md border border-white/20">
+                      <div className="rounded-xl overflow-hidden shadow-lg">
                         <AnimatedImage
                           src={service.image}
                           alt={service.title}
@@ -75,7 +75,7 @@ export default function Services() {
                     </div>
 
                     <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                      <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-8 group-hover:text-[#3551B4] transition-colors">
+                      <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-6 group-hover:text-[#3551B4] transition-colors">
                         {service.title}
                       </h2>
                       <p className="text-lg text-[rgb(19,38,27)] leading-relaxed">
