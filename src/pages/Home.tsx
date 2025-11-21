@@ -300,11 +300,11 @@ export default function Home() {
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-70">
             {partners.map((partner, index) => (
-              <div key={index} className="w-32 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+              <div key={index} className="w-48 h-28 flex items-center justify-center p-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl hover:border-white/50 transition-all duration-300">
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-w-full max-h-full object-contain"
+                  className="max-w-[80%] max-h-[80%] object-contain opacity-80 hover:opacity-100 transition-opacity"
                 />
               </div>
             ))}
