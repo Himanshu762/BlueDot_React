@@ -9,7 +9,7 @@ export default function Footer() {
           {/* About Section */}
           <div className="md:col-span-2">
             <img
-              src="/assets/footer_logo.avif"
+              src="/assets/footer_logo.png"
               alt="BlueDot Logo"
               className="h-10 w-auto mb-4"
               onError={(e) => {
@@ -148,38 +148,6 @@ export default function Footer() {
                       </span>
                     </div>
                   </div>
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-sm font-semibold mb-4 uppercase tracking-wider">Our Focus Areas</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/services" className="group block w-fit">
-                  <RollingText text="Lake Conservation" className="text-white/70 group-hover:text-[#e8bb49] transition-colors" height={20} />
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="group block w-fit">
-                  <RollingText text="Native Afforestation" className="text-white/70 group-hover:text-[#e8bb49] transition-colors" height={20} />
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="group block w-fit">
-                  <RollingText text="Wildlife Conservation" className="text-white/70 group-hover:text-[#e8bb49] transition-colors" height={20} />
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="group block w-fit">
-                  <RollingText text="Corporate Partnerships" className="text-white/70 group-hover:text-[#e8bb49] transition-colors" height={20} />
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="group block w-fit">
-                  <RollingText text="Volunteer Programs" className="text-white/70 group-hover:text-[#e8bb49] transition-colors" height={20} />
                 </Link>
               </li>
             </ul>

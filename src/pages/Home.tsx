@@ -116,13 +116,13 @@ export default function Home() {
     {
       title: 'Native Afforestation',
       description: 'Planting native trees to restore ecosystems and biodiversity.',
-      image: '/assets/Landing_mangrove.avif',
+      image: '/assets/Home_project_Mangrove.avif',
       link: '/services/native-afforestation'
     },
     {
       title: 'Wildlife Conservation',
       description: 'Mobile wildlife education bridging people, nature, and conservation.',
-      image: '/assets/Landing_Eco_savaari.avif',
+      image: '/assets/Home_project_EcoSavaari.avif',
       link: '/services/wildlife-conservation'
     }
   ];
@@ -178,6 +178,7 @@ export default function Home() {
     { name: 'Partner 8', logo: '/assets/partner_8.avif' },
     { name: 'Partner 9', logo: '/assets/partner_9.avif' },
     { name: 'Partner 10', logo: '/assets/partner_10.avif' },
+    { name: 'Partner 11', logo: '/assets/partner_11.png' },
   ];
 
   return (
@@ -294,9 +295,9 @@ export default function Home() {
       < section className="py-16 bg-background-light" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fadeIn">
-            <h3 className="text-center text-sm font-semibold text-forest-light uppercase tracking-widest mb-12">
+            <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold uppercase tracking-wide">
               TRUSTED BY
-            </h3>
+            </span>
           </ScrollReveal>
           <PartnerCarousel partners={partners} />
         </div>
@@ -308,7 +309,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-12 items-start relative z-10">
           <div className="lg:col-span-1 lg:sticky lg:top-32">
             <ScrollReveal variant="slideUp">
-              <span className="text-sm font-semibold text-forest-light uppercase tracking-widest">
+              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold uppercase tracking-wide mb-4">
                 OUR SERVICES
               </span>
               <h2 className="text-4xl lg:text-5xl font-bold text-forest mt-4 mb-6">
@@ -365,7 +366,7 @@ export default function Home() {
           <ScrollReveal variant="slideUp">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
               <div>
-                <span className="text-sm font-semibold text-forest-light uppercase tracking-widest">ALL PROJECTS</span>
+                <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold uppercase tracking-wide mb-3">ALL PROJECTS</span>
                 <h2 className="text-4xl lg:text-5xl font-bold text-forest mt-3 mb-4 max-w-2xl">
                   Restoring ecosystems to secure tomorrow's climate
                 </h2>
@@ -404,7 +405,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal variant="slideUp">
             <div className="text-center mb-12">
-              <span className="text-sm font-semibold text-forest-light uppercase tracking-widest">
+              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold uppercase tracking-wide mb-4">
                 FAQ
               </span>
               <h2 className="text-4xl font-bold text-forest my-4">

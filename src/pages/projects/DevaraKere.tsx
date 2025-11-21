@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import CtaSection from '../../components/ui/CTASection'
 
 export default function DevaraKereRestoration() {
   return (
@@ -65,23 +66,7 @@ export default function DevaraKereRestoration() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-[#3551B4] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to restore what nature gave us?
-          </h2>
-          <p className="text-xl mb-8">
-            Connect with us to align your sustainability goals with real-world impact. Let's restore ecosystems and communities — side by side.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-block px-8 py-4 bg-[rgb(238,185,42)] text-[rgb(19,38,27)] rounded-lg hover:bg-white hover:text-[#3551B4] transition text-lg font-semibold"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </section>
+      <CtaSection />
 
       <Footer />
     </div>

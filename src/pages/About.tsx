@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import AnimatedImage from '../components/ui/AnimatedImage';
 import { motion } from 'framer-motion';
-import { buttonHover } from '../utils/animations';
 import { verticalFloat, slideFromLeft, slideFromRight, scrollFromBottom } from '../utils/customAnimations';
+import CtaSection from '../components/ui/CTASection';
 
 export default function About() {
   const team = [
@@ -127,7 +126,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
-              <span className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-6">
+              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold mb-6">
                 About
               </span>
               <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-6">
@@ -195,7 +194,7 @@ export default function About() {
       <section className="py-20 bg-[rgb(243,235,212)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <span className="inline-block px-4 py-2 bg-[#3551B4] text-white rounded-full text-sm font-semibold mb-6">
+            <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold mb-6">
               Mission & values
             </span>
             <h2 className="text-5xl font-bold text-[rgb(19,38,27)] mb-6">
@@ -232,7 +231,7 @@ export default function About() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <span className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-6">
+              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold mb-6">
                 Our Team
               </span>
               <h2 className="text-5xl font-bold text-[rgb(19,38,27)]">
@@ -309,31 +308,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-[rgb(243,235,212)]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <ScrollReveal variant="slideUp">
-            <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-6">
-              Join us in making a difference
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal variant="slideUp" delay={0.2}>
-            <p className="text-xl text-[rgb(94,107,100)] mb-8">
-              Whether you're an individual volunteer, a corporate partner, or someone passionate about the environment, there's a place for you at BlueDot.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal variant="slideUp" delay={0.4}>
-            <motion.div variants={buttonHover} initial="rest" whileHover="hover" whileTap="tap">
-              <Link
-                to="/contact"
-                className="inline-block px-8 py-4 bg-[#3551B4] text-white rounded-lg hover:bg-[rgb(238,185,42)] hover:text-[rgb(19,38,27)] transition text-lg font-semibold shadow-lg"
-              >
-                Get Involved
-              </Link>
-            </motion.div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <CtaSection />
 
       <Footer />
     </div>
