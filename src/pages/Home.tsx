@@ -434,7 +434,7 @@ export default function Home() {
         <OrganicBlob color="golden" position="top-left" size="xl" opacity={0.15} />
         <OrganicBlob color="ocean" position="bottom-right" size="lg" opacity={0.12} />
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-[95%] xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="bg-white/40 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/20 grid lg:grid-cols-2 gap-0">
             <div className="p-8 md:p-16 flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
               <ScrollReveal variant="slideUp">
