@@ -20,6 +20,7 @@ export default function Navbar() {
     { path: '/about', label: 'About' },
     { path: '/services', label: 'Services' },
     { path: '/projects', label: 'Projects' },
+    { path: '/contact', label: 'Contact Us' }
   ]
 
   return (
@@ -83,38 +84,6 @@ export default function Navbar() {
                   </div>
                 </Link>
               ))}
-              <Link
-                to="/contact"
-                className="relative group overflow-hidden px-6 py-2 rounded-full transition-colors duration-200"
-                onMouseEnter={() => setHoveredLink('/contact')}
-                onMouseLeave={() => setHoveredLink(null)}
-              >
-                {/* Animated background pill */}
-                {hoveredLink === '/contact' && (
-                  <motion.div
-                    layoutId="navbar-pill-contact"
-                    className="absolute inset-0 bg-gradient-to-r from-golden-400 to-golden-500 rounded-full"
-                    initial={false}
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
-                    }}
-                  />
-                )}
-
-                {/* Rolling Text */}
-                <div className="relative z-10 h-6 overflow-hidden">
-                  <div className="flex flex-col transition-transform duration-300 group-hover:-translate-y-6">
-                    <span className="block h-6 flex items-center text-[#e8bb49] font-semibold text-sm">
-                      Contact Us
-                    </span>
-                    <span className="block h-6 flex items-center text-[#e8bb49] font-semibold text-sm">
-                      Contact Us
-                    </span>
-                  </div>
-                </div>
-              </Link>
             </div>
           </div>
 

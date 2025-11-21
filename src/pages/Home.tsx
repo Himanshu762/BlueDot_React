@@ -9,6 +9,7 @@ import WordReveal from '../components/ui/WordReveal';
 import ScrollingImageGrid from '../components/ui/ScrollingImageGrid';
 import OrganicBlob from '../components/ui/OrganicBlob';
 import MagneticButton from '../components/ui/MagneticButton';
+import OrbitingArrowButton from '../components/ui/OrbitingArrowButton';
 import { imageZoomOutReveal } from '../utils/customAnimations';
 import { getCategoryColor, categoryTextColor } from '../utils/projectStyles';
 
@@ -22,22 +23,24 @@ function ProjectCard({ title, description, image, date, category, link }: {
   link: string;
 }) {
   return (
-    <Link to={link} className="group block">
+    <Link to={link} className="group block relative">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={imageZoomOutReveal}
-        whileHover={{ y: -12 }}
-        transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+        whileHover="hover"
+        animate="rest"
         className="bg-white/30 backdrop-blur-md border border-white/20 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
       >
-        <div className="overflow-hidden aspect-[4/3]">
+        <div className="overflow-hidden aspect-[4/3] relative">
           <AnimatedImage
             src={image}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
+          {/* Orbiting Arrow Button */}
+          <OrbitingArrowButton />
         </div>
         <div className="p-6">
           <div className="flex items-center gap-3 mb-3">
@@ -56,12 +59,6 @@ function ProjectCard({ title, description, image, date, category, link }: {
             {title}
           </h3>
           <p className="text-forest-light leading-relaxed">{description}</p>
-          <div className="mt-4 inline-flex items-center gap-2 text-ocean-500 font-semibold text-sm group-hover:gap-3 transition-all">
-            Learn more
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </div>
         </div>
       </motion.div>
     </Link>
@@ -265,33 +262,33 @@ export default function Home() {
       </section >
 
       {/* About Us Section with Word Reveal */}
-      < section className="relative py-32 bg-background overflow-hidden" >
+      <section className="relative pt-32 pb-0 bg-background overflow-hidden">
         <OrganicBlob color="golden" position="bottom-right" size="lg" opacity={0.1} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal variant="slideUp">
-              <span className="text-sm font-semibold text-forest-light uppercase tracking-widest">
-                WHO WE ARE
+              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-8">
+                About
               </span>
             </ScrollReveal>
 
             <WordReveal
-              text="We are a Bangalore-based non-profit organization dedicated to healing Earth's blue ecosystems through grassroots environmental action that delivers real measurable impact"
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-forest mt-12 mb-20 leading-tight"
-              as="h2"
+              text="We're a focused team of restoration experts working with organizations to turn sustainability goals into real-world ecological impact."
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5e6b64] mt-6 mb-12 leading-tight tracking-tight"
+              as="h3"
             />
 
-            <ScrollReveal variant="slideUp" delay={1.5}>
+            <ScrollReveal variant="slideUp" delay={1.5} className="mt-20">
               <MagneticButton href="/about" variant="primary" size="lg">
-                Learn More About Us
+                Learn more
               </MagneticButton>
             </ScrollReveal>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Trusted By Section */}
-      < section className="py-32 bg-background-light" >
+      <section className="pt-0 pb-32 bg-background-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fadeIn">
             <div className="flex flex-col items-center mb-24">
@@ -301,22 +298,22 @@ export default function Home() {
               </span>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-70">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
             {partners.map((partner, index) => (
-              <div key={index} className="w-48 h-28 flex items-center justify-center p-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl hover:border-white/50 transition-all duration-300">
+              <div key={index} className="w-48 h-28 flex items-center justify-center p-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl transition-all duration-300">
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-w-[80%] max-h-[80%] object-contain opacity-80 hover:opacity-100 transition-opacity"
+                  className="max-w-[80%] max-h-[80%] object-contain"
                 />
               </div>
             ))}
           </div>
         </div>
-      </section >
+      </section>
 
-      {/* Services Section */}
-      < section className="relative py-20 bg-background overflow-hidden" >
+      {/* Services Section - Fixed Sticky Scroll */}
+      < section className="relative py-20 bg-background" >
         <OrganicBlob color="ocean" position="top-left" size="md" opacity={0.12} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-12 items-start relative z-10">
           <div className="lg:col-span-1 lg:sticky lg:top-32">
@@ -335,18 +332,21 @@ export default function Home() {
           <div className="lg:col-span-2 space-y-8">
             {services.map((service, index) => (
               <ScrollReveal key={index} variant="slideUp" delay={index * 0.1}>
-                <Link to={service.link} className="group block">
+                <Link to={service.link} className="group block relative">
                   <motion.div
-                    whileHover={{ y: -8 }}
+                    whileHover="hover"
+                    animate="rest"
                     className="bg-white/30 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20"
                   >
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden relative">
                       <AnimatedImage
                         src={service.image}
                         alt={service.title}
                         aspectRatio="video"
                         className="group-hover:scale-105 transition-transform duration-700"
                       />
+                      {/* Orbiting Arrow Button */}
+                      <OrbitingArrowButton />
                     </div>
                     <div className="p-6">
                       <h3 className="text-2xl font-bold text-forest mb-3 group-hover:text-ocean-500 transition-colors">
@@ -355,12 +355,6 @@ export default function Home() {
                       <p className="text-lg text-forest-light">
                         {service.description}
                       </p>
-                      <span className="inline-flex items-center gap-2 mt-4 text-ocean-500 font-semibold group-hover:gap-3 transition-all">
-                        Learn more
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </span>
                     </div>
                   </motion.div>
                 </Link>

@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Accordion from '../components/ui/Accordion';
 import ScrollReveal from '../components/ui/ScrollReveal';
+import OrganicBlob from '../components/ui/OrganicBlob';
 import { motion } from 'framer-motion';
 
 // Declare Tally on window object for TypeScript
@@ -85,11 +86,14 @@ export default function Contact() {
 
 
   return (
-    <div className="min-h-screen bg-[rgb(243,235,212)]">
+    <div className="min-h-screen bg-[rgb(243,235,212)] relative overflow-hidden">
       <Navbar />
 
+      <OrganicBlob color="ocean" position="top-right" size="xl" opacity={0.15} />
+      <OrganicBlob color="leaf" position="bottom-left" size="lg" opacity={0.12} />
+
       {/* Main Content Section */}
-      <section className="pt-32 pb-20">
+      <section className="pt-32 pb-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
 
@@ -148,7 +152,7 @@ export default function Contact() {
             {/* Right Column: Tally Form Embed */}
             <div className="sticky top-24">
               <ScrollReveal>
-                <div className="bg-white rounded-2xl p-2 shadow-2xl border border-gray-100 min-h-[530px]">
+                <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-2xl p-2 shadow-2xl min-h-[530px]">
                   <iframe
                     data-tally-src="https://tally.so/embed/mRQL7p?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                     loading="lazy"
@@ -168,38 +172,40 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-transparent">
+      <section className="py-20 bg-transparent relative z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <motion.span
-              initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
-              whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any }}
-              className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-8"
-            >
-              FAQ
-            </motion.span>
-            <motion.h2
-              initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
-              whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.1 }}
-              className="text-4xl font-bold text-[rgb(19,38,27)] mb-8"
-            >
-              Frequently asked questions
-            </motion.h2>
-            <motion.p
-              initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
-              whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.2 }}
-              className="text-lg text-[rgb(94,107,100)]"
-            >
-              Here are the top questions our clients ask before getting started.
-            </motion.p>
+          <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 shadow-xl">
+            <div className="text-center mb-12">
+              <motion.span
+                initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
+                whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any }}
+                className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-8"
+              >
+                FAQ
+              </motion.span>
+              <motion.h2
+                initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
+                whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.1 }}
+                className="text-4xl font-bold text-[rgb(19,38,27)] mb-8"
+              >
+                Frequently asked questions
+              </motion.h2>
+              <motion.p
+                initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
+                whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.2 }}
+                className="text-lg text-[rgb(94,107,100)]"
+              >
+                Here are the top questions our clients ask before getting started.
+              </motion.p>
+            </div>
+            <Accordion items={faqs} />
           </div>
-          <Accordion items={faqs} />
         </div>
       </section>
 
