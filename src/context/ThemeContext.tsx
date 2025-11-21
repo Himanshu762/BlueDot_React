@@ -30,13 +30,15 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     useEffect(() => {
         const root = window.document.documentElement;
+        console.log('Current theme state:', theme);
         if (theme === 'dark') {
             root.classList.add('dark');
+            console.log('Added dark class. ClassList:', root.classList.toString());
         } else {
             root.classList.remove('dark');
+            console.log('Removed dark class. ClassList:', root.classList.toString());
         }
         localStorage.setItem('theme', theme);
-        console.log('Theme toggled to:', theme);
     }, [theme]);
 
     const toggleTheme = () => {

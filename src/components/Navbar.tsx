@@ -77,14 +77,14 @@ export default function Navbar() {
                   <div className="relative z-10 h-6 overflow-hidden">
                     <div className="flex flex-col transition-transform duration-300 group-hover:-translate-y-6">
                       <span className={`block h-6 flex items-center ${hoveredLink === link.path || location.pathname === link.path
-                          ? 'text-white'
-                          : 'text-[#e8bb49] dark:text-dark-text-secondary'
+                        ? 'text-white'
+                        : 'text-[#e8bb49] dark:text-dark-text-secondary'
                         }`}>
                         {link.label}
                       </span>
                       <span className={`block h-6 flex items-center ${hoveredLink === link.path || location.pathname === link.path
-                          ? 'text-white'
-                          : 'text-[#e8bb49] dark:text-dark-text-secondary'
+                        ? 'text-white'
+                        : 'text-[#e8bb49] dark:text-dark-text-secondary'
                         }`}>
                         {link.label}
                       </span>
@@ -97,7 +97,7 @@ export default function Navbar() {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-white/40 dark:bg-dark-card/40 backdrop-blur-md border border-white/20 dark:border-white/10 text-forest dark:text-dark-text-primary hover:scale-110 transition-all duration-200"
+              className="relative z-50 cursor-pointer p-2 rounded-full bg-white/40 dark:bg-dark-card/40 backdrop-blur-md border border-white/20 dark:border-white/10 text-forest dark:text-dark-text-primary hover:scale-110 transition-all duration-200"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? (
@@ -116,7 +116,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-4">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-white/40 dark:bg-dark-card/40 backdrop-blur-md border border-white/20 dark:border-white/10 text-forest dark:text-dark-text-primary"
+              className="relative z-50 cursor-pointer p-2 rounded-full bg-white/40 dark:bg-dark-card/40 backdrop-blur-md border border-white/20 dark:border-white/10 text-forest dark:text-dark-text-primary"
             >
               {theme === 'dark' ? (
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
