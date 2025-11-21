@@ -1,138 +1,139 @@
-import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import OrganicBlob from '../../components/ui/OrganicBlob'
+import ScrollReveal from '../../components/ui/ScrollReveal'
+import CtaSection from '../../components/ui/CTASection'
 
 export default function WildlifeConservation() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 bg-[rgb(243,235,212)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <OrganicBlob color="golden" position="top-right" size="xl" opacity={0.15} />
+        <OrganicBlob color="ocean" position="bottom-left" size="lg" opacity={0.12} />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-10">
-              Wildlife Conservation
-            </h1>
-            <p className="text-xl text-[rgb(94,107,100)]">
-              BlueDot - Reviving India's Blue Ecosystems
-            </p>
+            <ScrollReveal>
+              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
+                Service
+              </span>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-forest mb-8">
+                Wildlife Conservation
+              </h1>
+              <p className="text-xl md:text-2xl text-forest-light leading-relaxed">
+                Bridging people, nature, and conservation through education.
+              </p>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 bg-[rgb(243,235,212)]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
-            The Problem
-          </h2>
-          <p className="text-xl text-[rgb(19,38,27)] leading-relaxed">
-            In many rural and semi-urban communities, there's limited access to wildlife education. This leads to misinformation, fear of local fauna, and a growing disconnect from nature — worsening human-animal conflicts and reducing conservation awareness.
-          </p>
+      <section className="py-20 bg-background-light relative overflow-hidden">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <ScrollReveal variant="slideUp">
+            <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 shadow-xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-forest mb-8">
+                The Problem
+              </h2>
+              <p className="text-lg md:text-xl text-forest-light leading-relaxed">
+                In many rural and semi-urban communities, there's limited access to wildlife education. This leads to misinformation, fear of local fauna, and a growing disconnect from nature — worsening human-animal conflicts and reducing conservation awareness.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 bg-transparent">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
-            Our Solution
-          </h2>
-          <p className="text-xl text-[rgb(19,38,27)] leading-relaxed">
-            <strong>Eco Savaari</strong> is a first-of-its-kind mobile outreach initiative. A specially equipped van travels to schools, villages, and forest-edge settlements, turning open spaces into learning hubs. Through games, storytelling, visual aids, and interactive sessions, it makes wildlife and conservation education accessible, engaging, and rooted in local culture.
-          </p>
+      <section className="py-20 relative">
+        <OrganicBlob color="leaf" position="center" size="xl" opacity={0.05} />
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <ScrollReveal variant="slideUp">
+            <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 shadow-xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-forest mb-8">
+                Our Solution
+              </h2>
+              <p className="text-lg md:text-xl text-forest-light leading-relaxed">
+                <strong className="text-forest font-bold">Eco Savaari</strong> is a first-of-its-kind mobile outreach initiative. A specially equipped van travels to schools, villages, and forest-edge settlements, turning open spaces into learning hubs. Through games, storytelling, visual aids, and interactive sessions, it makes wildlife and conservation education accessible, engaging, and rooted in local culture.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Why It Works Section */}
-      <section className="py-20 bg-[rgb(243,235,212)]">
+      <section className="py-20 bg-background-light relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
-            Why It Works
-          </h2>
-          <div className="space-y-6">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-2 bg-[rgb(238,185,42)] rounded-full mt-2 mr-4"></div>
-              <p className="text-lg text-[rgb(19,38,27)]">
-                Uses regional languages and simple tools to make concepts relatable.
-              </p>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-2 bg-[rgb(238,185,42)] rounded-full mt-2 mr-4"></div>
-              <p className="text-lg text-[rgb(19,38,27)]">
-                Breaks barriers by reaching communities where traditional awareness programs don't go.
-              </p>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-2 bg-[rgb(238,185,42)] rounded-full mt-2 mr-4"></div>
-              <p className="text-lg text-[rgb(19,38,27)]">
-                Creates curiosity and dialogue among children and youth — the next stewards of nature.
-              </p>
-            </div>
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-forest mb-12 text-center">
+              Why It Works
+            </h2>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "Uses regional languages and simple tools to make concepts relatable.",
+              "Breaks barriers by reaching communities where traditional awareness programs don't go.",
+              "Creates curiosity and dialogue among children and youth — the next stewards of nature."
+            ].map((item, index) => (
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className="bg-white/40 backdrop-blur-sm border border-white/20 rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="w-3 h-3 bg-[#e8bb49] rounded-full mb-6"></div>
+                  <p className="text-lg text-forest leading-relaxed">
+                    {item}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Impact Section */}
-      <section className="py-20 bg-transparent">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
-            Our Impact So Far
-          </h2>
-          <div className="space-y-6">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-2 bg-[rgb(238,185,42)] rounded-full mt-2 mr-4"></div>
-              <p className="text-lg text-[rgb(19,38,27)]">
-                Reached thousands of students across Karnataka.
-              </p>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-2 bg-[rgb(238,185,42)] rounded-full mt-2 mr-4"></div>
-              <p className="text-lg text-[rgb(19,38,27)]">
-                Over 85% of participants report greater interest in wildlife after sessions.
-              </p>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-2 bg-[rgb(238,185,42)] rounded-full mt-2 mr-4"></div>
-              <p className="text-lg text-[rgb(19,38,27)]">
-                Teachers and parents note reduced fear and improved understanding of local ecosystems.
-              </p>
-            </div>
+      <section className="py-20 relative overflow-hidden">
+        <OrganicBlob color="ocean" position="bottom-right" size="lg" opacity={0.1} />
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-forest mb-12 text-center">
+              Our Impact So Far
+            </h2>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "Reached thousands of students across Karnataka.",
+              "Over 85% of participants report greater interest in wildlife after sessions.",
+              "Teachers and parents note reduced fear and improved understanding of local ecosystems."
+            ].map((item, index) => (
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className="flex items-start bg-white/30 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-md h-full">
+                  <div className="flex-shrink-0 w-2 h-2 bg-[#3c4faf] rounded-full mt-2.5 mr-4"></div>
+                  <p className="text-lg text-forest-light">
+                    {item}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Difference Section */}
-      <section className="py-20 bg-[rgb(243,235,212)]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
-            Our Difference
-          </h2>
-          <p className="text-xl text-[rgb(19,38,27)] leading-relaxed">
-            Unlike static awareness programs, Eco Savaari brings conservation to people's doorsteps. Its mobile, interactive model ensures both inclusivity and deeper behavioural change, planting the seeds of stewardship where it's needed most.
-          </p>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-[#3551B4] text-white">
+      <section className="py-20 bg-background-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-10">
-            Take Wildlife Education on the Road
-          </h2>
-          <p className="text-xl mb-8">
-            Join us in bridging people and nature through mobile wildlife education that inspires future conservation leaders.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-block px-8 py-4 bg-[rgb(238,185,42)] text-[rgb(19,38,27)] rounded-lg hover:bg-white hover:text-[#3551B4] transition text-lg font-semibold"
-          >
-            Support Eco Savaari
-          </Link>
+          <ScrollReveal variant="slideUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-forest mb-8">
+              Our Difference
+            </h2>
+            <p className="text-xl text-forest-light leading-relaxed">
+              Unlike static awareness programs, Eco Savaari brings conservation to people's doorsteps. Its mobile, interactive model ensures both inclusivity and deeper behavioural change, planting the seeds of stewardship where it's needed most.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
+      <CtaSection />
       <Footer />
     </div>
   )

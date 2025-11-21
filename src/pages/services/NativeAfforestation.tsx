@@ -1,138 +1,139 @@
-import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import OrganicBlob from '../../components/ui/OrganicBlob'
+import ScrollReveal from '../../components/ui/ScrollReveal'
+import CtaSection from '../../components/ui/CTASection'
 
 export default function NativeAfforestation() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 bg-[rgb(243,235,212)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <OrganicBlob color="leaf" position="top-left" size="xl" opacity={0.15} />
+        <OrganicBlob color="golden" position="bottom-right" size="lg" opacity={0.12} />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-10">
-              Native Afforestation
-            </h1>
-            <p className="text-xl text-[rgb(94,107,100)]">
-              BlueDot - Reviving India's Blue Ecosystems
-            </p>
+            <ScrollReveal>
+              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
+                Service
+              </span>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-forest mb-8">
+                Native Afforestation
+              </h1>
+              <p className="text-xl md:text-2xl text-forest-light leading-relaxed">
+                Restoring ecosystems with native species that co-evolved with the land.
+              </p>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 bg-[rgb(243,235,212)]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
-            The Problem
-          </h2>
-          <p className="text-xl text-[rgb(19,38,27)] leading-relaxed">
-            Rapid urbanization and deforestation have degraded ecosystems, reduced biodiversity, and increased vulnerability to climate change. Exotic or fast-growing plantation drives often fail long-term, as they don't support local fauna or restore ecological balance.
-          </p>
+      <section className="py-20 bg-background-light relative overflow-hidden">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <ScrollReveal variant="slideUp">
+            <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 shadow-xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-forest mb-8">
+                The Problem
+              </h2>
+              <p className="text-lg md:text-xl text-forest-light leading-relaxed">
+                Rapid urbanization and deforestation have degraded ecosystems, reduced biodiversity, and increased vulnerability to climate change. Exotic or fast-growing plantation drives often fail long-term, as they don't support local fauna or restore ecological balance.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 bg-transparent">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
-            Our Solution
-          </h2>
-          <p className="text-xl text-[rgb(19,38,27)] leading-relaxed mb-4">
-            BlueDot plants only <strong>native species</strong> — trees that co-evolved with local ecosystems and communities. These trees support pollinators, birds, and soil health, while being resilient to local climates and requiring minimal maintenance.
-          </p>
+      <section className="py-20 relative">
+        <OrganicBlob color="ocean" position="center" size="xl" opacity={0.05} />
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <ScrollReveal variant="slideUp">
+            <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 shadow-xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-forest mb-8">
+                Our Solution
+              </h2>
+              <p className="text-lg md:text-xl text-forest-light leading-relaxed">
+                BlueDot plants only <strong className="text-forest font-bold">native species</strong> — trees that co-evolved with local ecosystems and communities. These trees support pollinators, birds, and soil health, while being resilient to local climates and requiring minimal maintenance.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Why It Works Section */}
-      <section className="py-20 bg-[rgb(243,235,212)]">
+      <section className="py-20 bg-background-light relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
-            Why It Works
-          </h2>
-          <div className="space-y-6">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-2 bg-[rgb(238,185,42)] rounded-full mt-2 mr-4"></div>
-              <p className="text-lg text-[rgb(19,38,27)]">
-                Native trees create self-sustaining ecosystems, not just greenery.
-              </p>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-2 bg-[rgb(238,185,42)] rounded-full mt-2 mr-4"></div>
-              <p className="text-lg text-[rgb(19,38,27)]">
-                They strengthen biodiversity networks, aiding pollination and seed dispersal.
-              </p>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-2 bg-[rgb(238,185,42)] rounded-full mt-2 mr-4"></div>
-              <p className="text-lg text-[rgb(19,38,27)]">
-                They demand fewer resources, making them climate- and cost-friendly.
-              </p>
-            </div>
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-forest mb-12 text-center">
+              Why It Works
+            </h2>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "Native trees create self-sustaining ecosystems, not just greenery.",
+              "They strengthen biodiversity networks, aiding pollination and seed dispersal.",
+              "They demand fewer resources, making them climate- and cost-friendly."
+            ].map((item, index) => (
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className="bg-white/40 backdrop-blur-sm border border-white/20 rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="w-3 h-3 bg-[#e8bb49] rounded-full mb-6"></div>
+                  <p className="text-lg text-forest leading-relaxed">
+                    {item}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Impact Section */}
-      <section className="py-20 bg-transparent">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
-            Our Impact So Far
-          </h2>
-          <div className="space-y-6">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-2 bg-[rgb(238,185,42)] rounded-full mt-2 mr-4"></div>
-              <p className="text-lg text-[rgb(19,38,27)]">
-                Planted 160,000+ native trees.
-              </p>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-2 bg-[rgb(238,185,42)] rounded-full mt-2 mr-4"></div>
-              <p className="text-lg text-[rgb(19,38,27)]">
-                Created urban and rural "green lungs" that improve air and water quality.
-              </p>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-2 h-2 bg-[rgb(238,185,42)] rounded-full mt-2 mr-4"></div>
-              <p className="text-lg text-[rgb(19,38,27)]">
-                Supported habitat restoration, with noticeable return of local bird and insect species.
-              </p>
-            </div>
+      <section className="py-20 relative overflow-hidden">
+        <OrganicBlob color="golden" position="bottom-left" size="lg" opacity={0.1} />
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-forest mb-12 text-center">
+              Our Impact So Far
+            </h2>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "Planted 160,000+ native trees.",
+              "Created urban and rural 'green lungs' that improve air and water quality.",
+              "Supported habitat restoration, with noticeable return of local bird and insect species."
+            ].map((item, index) => (
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className="flex items-start bg-white/30 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-md h-full">
+                  <div className="flex-shrink-0 w-2 h-2 bg-[#3c4faf] rounded-full mt-2.5 mr-4"></div>
+                  <p className="text-lg text-forest-light">
+                    {item}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Difference Section */}
-      <section className="py-20 bg-[rgb(243,235,212)]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
-            Our Difference
-          </h2>
-          <p className="text-xl text-[rgb(19,38,27)] leading-relaxed">
-            Unlike monoculture plantations, our approach emphasises <strong>ecological integrity</strong>. Each project is designed for long-term survival, involving communities in care and stewardship, ensuring these forests thrive for generations.
-          </p>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-[#3551B4] text-white">
+      <section className="py-20 bg-background-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-10">
-            Grow Forests That Last
-          </h2>
-          <p className="text-xl mb-8">
-            Help us restore balance with native trees that heal ecosystems, support wildlife, and protect future generations.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-block px-8 py-4 bg-[rgb(238,185,42)] text-[rgb(19,38,27)] rounded-lg hover:bg-white hover:text-[#3551B4] transition text-lg font-semibold"
-          >
-            Support Afforestation
-          </Link>
+          <ScrollReveal variant="slideUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-forest mb-8">
+              Our Difference
+            </h2>
+            <p className="text-xl text-forest-light leading-relaxed">
+              Unlike monoculture plantations, our approach emphasises <strong className="text-forest font-bold">ecological integrity</strong>. Each project is designed for long-term survival, involving communities in care and stewardship, ensuring these forests thrive for generations.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
+      <CtaSection />
       <Footer />
     </div>
   )
