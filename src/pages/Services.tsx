@@ -31,21 +31,21 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen bg-[rgb(243,235,212)]">
+    <div className="min-h-screen bg-background dark:bg-[#0C142B] transition-colors duration-300">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 bg-[rgb(243,235,212)]">
+      <section className="relative pt-32 pb-16 bg-background dark:bg-[#0C142B] transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="text-center max-w-4xl mx-auto">
             <ScrollReveal>
-              <span className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-8">
+              <span className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold mb-8">
                 Services
               </span>
-              <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-10">
+              <h1 className="text-5xl md:text-6xl font-bold text-forest dark:text-[#F5F0E1] mb-10">
                 Restoring Ecosystems, Empowering Communities
               </h1>
-              <p className="text-xl text-[rgb(94,107,100)]">
+              <p className="text-xl text-forest-light dark:text-[#F3EBC0]">
                 Delivering impactful environmental services — from restoring lakes and planting native forests to building conservation awareness and sustainable solutions that benefit both people and nature.
               </p>
             </ScrollReveal>
@@ -61,7 +61,7 @@ export default function Services() {
               <ScrollReveal key={service.id} variant="slideUp" delay={index * 0.1}>
                 <Link to={service.link} className="group">
                   <div
-                    className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white/30 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all`}
+                    className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all`}
                   >
                     <div className={` ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                       <div className="rounded-xl overflow-hidden shadow-lg">
@@ -75,10 +75,10 @@ export default function Services() {
                     </div>
 
                     <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                      <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-6 group-hover:text-[#3551B4] transition-colors">
+                      <h2 className="text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-6 group-hover:text-[#3551B4] transition-colors">
                         {service.title}
                       </h2>
-                      <p className="text-lg text-[rgb(19,38,27)] leading-relaxed">
+                      <p className="text-lg text-forest dark:text-[#F3EBC0] leading-relaxed">
                         {service.description}
                       </p>
                     </div>

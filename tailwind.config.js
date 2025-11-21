@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -18,6 +19,17 @@ export default {
           DEFAULT: '#F4EBD6',
           light: '#FAF6ED',
           dark: '#EDE4CB',
+        },
+        // Custom Dark Mode Colors
+        dark: {
+          bg: '#0C142B',
+          card: '#0f3433',
+          text: {
+            primary: '#F5F0E1',
+            secondary: '#F3EBC0',
+            tertiary: '#F3EBD4',
+            highlight: '#F5EBBC',
+          }
         },
         golden: {
           50: '#FEF9E7',

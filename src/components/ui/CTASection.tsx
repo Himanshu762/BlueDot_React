@@ -15,15 +15,15 @@ export default function CtaSection() {
     return (
         <section className="py-20 bg-transparent">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-white/40 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/20 grid lg:grid-cols-2 gap-0">
+                <div className="bg-white/40 dark:bg-[#0f3433]/50 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/20 dark:border-white/10 grid lg:grid-cols-2 gap-0 transition-colors duration-300">
                     <div className="p-8 md:p-16 flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
                         <ScrollReveal variant="slideUp">
-                            <h2 className="text-4xl lg:text-5xl font-bold text-forest mb-6">
+                            <h2 className="text-4xl lg:text-5xl font-bold text-forest dark:text-[#F5F0E1] mb-6">
                                 Ready to restore what nature gave us?
                             </h2>
                         </ScrollReveal>
                         <ScrollReveal variant="slideUp" delay={0.2}>
-                            <p className="text-lg text-forest-light mb-8 max-w-md">
+                            <p className="text-lg text-forest-light dark:text-[#F3EBC0] mb-8 max-w-md">
                                 Connect with us to align your sustainability goals with real-world impact. Let's restore ecosystems and communities — side by side.
                             </p>
                         </ScrollReveal>

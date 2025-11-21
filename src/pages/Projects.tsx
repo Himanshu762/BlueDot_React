@@ -21,7 +21,7 @@ function ProjectCard({ title, description, image, date, category, link }: {
       <motion.div
         whileHover={{ y: -8 }}
         transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-        className="bg-white/30 backdrop-blur-md border border-white/20 rounded-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all h-full flex flex-col"
+        className="bg-white/30 dark:bg-[#0f3433] backdrop-blur-md border border-white/20 dark:border-white/10 rounded-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all h-full flex flex-col"
       >
         <div className="overflow-hidden aspect-video">
           <AnimatedImage
@@ -42,12 +42,12 @@ function ProjectCard({ title, description, image, date, category, link }: {
             >
               {category}
             </span>
-            <span className="text-xs text-[rgb(94,107,100)]">{date}</span>
+            <span className="text-xs text-forest-light dark:text-[#F3EBC0]">{date}</span>
           </div>
-          <h3 className="text-2xl font-bold text-[rgb(19,38,27)] mb-2 group-hover:text-[#3551B4] transition-colors">
+          <h3 className="text-2xl font-bold text-forest dark:text-[#F5F0E1] mb-2 group-hover:text-[#3551B4] transition-colors">
             {title}
           </h3>
-          <p className="text-[rgb(94,107,100)]">{description}</p>
+          <p className="text-forest-light dark:text-[#F3EBC0]">{description}</p>
         </div>
       </motion.div>
     </Link>
@@ -92,21 +92,21 @@ export default function Projects() {
   ];
 
   return (
-    <div className="min-h-screen bg-[rgb(243,235,212)]">
+    <div className="min-h-screen bg-background dark:bg-[#0C142B] transition-colors duration-300">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 bg-[rgb(243,235,212)]">
+      <section className="relative pt-32 pb-16 bg-background dark:bg-[#0C142B] transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="text-center max-w-4xl mx-auto">
             <ScrollReveal>
-              <span className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-8">
+              <span className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold mb-8">
                 Projects
               </span>
-              <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-10">
+              <h1 className="text-5xl md:text-6xl font-bold text-forest dark:text-[#F5F0E1] mb-10">
                 BlueDot Journal
               </h1>
-              <p className="text-xl text-[rgb(94,107,100)]">
+              <p className="text-xl text-forest-light dark:text-[#F3EBC0]">
                 Stories, research, and reflections on restoring our planet — one action at a time.
               </p>
             </ScrollReveal>

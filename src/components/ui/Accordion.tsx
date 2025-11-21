@@ -53,7 +53,7 @@ export default function Accordion({ items, className = '' }: AccordionProps) {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           transition={{ delay: index * 0.1, duration: 0.4 }}
-          className="bg-white/30 backdrop-blur-md border border-white/20 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+          className="bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
           style={{ willChange: 'auto' }}
         >
           <button
@@ -61,7 +61,7 @@ export default function Accordion({ items, className = '' }: AccordionProps) {
             className="w-full flex justify-between items-center p-6 text-left group"
             aria-expanded={openIndex === index}
           >
-            <span className="text-lg font-semibold text-[rgb(19,38,27)] pr-8">
+            <span className="text-lg font-semibold text-forest dark:text-[#F5F0E1] pr-8">
               {item.question}
             </span>
 
@@ -69,7 +69,7 @@ export default function Accordion({ items, className = '' }: AccordionProps) {
               variants={plusToMinus}
               initial="plus"
               animate={openIndex === index ? 'minus' : 'plus'}
-              className="flex-shrink-0 w-6 h-6 text-[rgb(238,185,42)]"
+              className="flex-shrink-0 w-6 h-6 text-[#e8bb49]"
             >
               <svg
                 className="w-full h-full"
@@ -92,7 +92,7 @@ export default function Accordion({ items, className = '' }: AccordionProps) {
                 exit="closed"
                 className="overflow-hidden"
               >
-                <div className="px-6 pb-6 text-[rgb(94,107,100)] leading-relaxed">
+                <div className="px-6 pb-6 text-forest-light dark:text-[#F3EBC0] leading-relaxed">
                   {item.answer}
                 </div>
               </motion.div>

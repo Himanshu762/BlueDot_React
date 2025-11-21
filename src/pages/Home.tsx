@@ -31,7 +31,7 @@ function ProjectCard({ title, description, image, date, category, link }: {
         variants={imageZoomOutReveal}
         whileHover="hover"
         animate="rest"
-        className="bg-white/30 backdrop-blur-md border border-white/20 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+        className="bg-white/30 dark:bg-[#0f3433] backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
       >
         <div className="overflow-hidden aspect-[4/3] relative">
           <AnimatedImage
@@ -53,12 +53,12 @@ function ProjectCard({ title, description, image, date, category, link }: {
             >
               {category}
             </span>
-            <span className="text-xs text-forest-light font-medium">{date}</span>
+            <span className="text-xs text-forest-light dark:text-[#F3EBC0] font-medium">{date}</span>
           </div>
-          <h3 className="text-2xl font-bold text-forest mb-2 group-hover:text-ocean-500 transition-colors">
+          <h3 className="text-2xl font-bold text-forest dark:text-[#F5F0E1] mb-2 group-hover:text-ocean-500 transition-colors">
             {title}
           </h3>
-          <p className="text-forest-light leading-relaxed">{description}</p>
+          <p className="text-forest-light dark:text-[#F3EBC0] leading-relaxed">{description}</p>
         </div>
       </motion.div>
     </Link>
@@ -178,7 +178,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background dark:bg-[#0C142B] transition-colors duration-300">
       <Navbar />
 
       {/* Hero Section - Immersive with Organic Blobs */}
@@ -189,7 +189,7 @@ export default function Home() {
         <OrganicBlob color="leaf" position="center" size="md" opacity={0.08} />
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-background-light/30 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-background-light/30 to-transparent dark:via-[#0C142B]/30 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex-grow flex flex-col justify-center">
           <motion.div
@@ -200,7 +200,7 @@ export default function Home() {
           >
             {/* Main Headline */}
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-forest mb-8 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-forest dark:text-[#F5F0E1] mb-8 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -212,7 +212,7 @@ export default function Home() {
 
             {/* Subtitle */}
             <motion.p
-              className="text-base md:text-lg text-forest-light mb-12 max-w-2xl mx-auto leading-relaxed"
+              className="text-base md:text-lg text-forest-light dark:text-[#F3EBC0] mb-12 max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
@@ -247,7 +247,7 @@ export default function Home() {
             '/assets/Landing_Lake_silt.avif',
             '/assets/Landing_mangrove.avif'
           ].map((src, index) => (
-            <div key={index} className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-white/20 group">
+            <div key={index} className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-white/20 dark:border-white/10 group">
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10" />
               <AnimatedImage
                 src={src}
@@ -262,7 +262,7 @@ export default function Home() {
       </section >
 
       {/* About Us Section with Word Reveal */}
-      <section className="relative pt-32 pb-0 bg-background overflow-hidden">
+      <section className="relative pt-32 pb-0 bg-background dark:bg-[#0C142B] overflow-hidden transition-colors duration-300">
         <OrganicBlob color="golden" position="bottom-right" size="lg" opacity={0.1} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -274,7 +274,7 @@ export default function Home() {
 
             <WordReveal
               text="We're a focused team of restoration experts working with organizations to turn sustainability goals into real-world ecological impact."
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5e6b64] mt-6 mb-12 leading-tight tracking-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5e6b64] dark:text-[#F5F0E1] mt-6 mb-12 leading-tight tracking-tight"
               as="h3"
             />
 
@@ -288,11 +288,11 @@ export default function Home() {
       </section>
 
       {/* Trusted By Section */}
-      <section className="pt-0 pb-32 bg-background-light">
+      <section className="pt-0 pb-32 bg-background-light dark:bg-[#0C142B] transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fadeIn">
             <div className="flex flex-col items-center mb-24">
-              <div className="h-16 w-px bg-forest-light/20 mb-8"></div>
+              <div className="h-16 w-px bg-forest-light/20 dark:bg-white/10 mb-8"></div>
               <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide">
                 TRUSTED BY
               </span>
@@ -300,7 +300,7 @@ export default function Home() {
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
             {partners.map((partner, index) => (
-              <div key={index} className="w-48 h-28 flex items-center justify-center p-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl transition-all duration-300">
+              <div key={index} className="w-48 h-28 flex items-center justify-center p-2 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/30 dark:border-white/10 rounded-xl transition-all duration-300">
                 <img
                   src={partner.logo}
                   alt={partner.name}
@@ -313,7 +313,7 @@ export default function Home() {
       </section>
 
       {/* Services Section - Fixed Sticky Scroll */}
-      < section className="relative py-20 bg-background" >
+      < section className="relative py-20 bg-background dark:bg-[#0C142B] transition-colors duration-300" >
         <OrganicBlob color="ocean" position="top-left" size="md" opacity={0.12} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-12 items-start relative z-10">
           <div className="lg:col-span-1 lg:sticky lg:top-32">
@@ -321,10 +321,10 @@ export default function Home() {
               <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-4">
                 OUR SERVICES
               </span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-forest mt-4 mb-10">
+              <h2 className="text-4xl lg:text-5xl font-bold text-forest dark:text-[#F5F0E1] mt-4 mb-10">
                 Where Strategy Meets Impact
               </h2>
-              <p className="text-lg text-forest-light">
+              <p className="text-lg text-forest-light dark:text-[#F3EBC0]">
                 We deliver comprehensive environmental solutions that create lasting change through scientific research, community engagement, and hands-on restoration.
               </p>
             </ScrollReveal>
@@ -336,7 +336,7 @@ export default function Home() {
                   <motion.div
                     whileHover="hover"
                     animate="rest"
-                    className="bg-white/30 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20"
+                    className="bg-white/30 dark:bg-[#0f3433] backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 dark:border-white/10"
                   >
                     <div className="overflow-hidden relative">
                       <AnimatedImage
@@ -349,10 +349,10 @@ export default function Home() {
                       <OrbitingArrowButton />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-2xl font-bold text-forest mb-3 group-hover:text-ocean-500 transition-colors">
+                      <h3 className="text-2xl font-bold text-forest dark:text-[#F5F0E1] mb-3 group-hover:text-ocean-500 transition-colors">
                         {service.title}
                       </h3>
-                      <p className="text-lg text-forest-light">
+                      <p className="text-lg text-forest-light dark:text-[#F3EBC0]">
                         {service.description}
                       </p>
                     </div>
@@ -365,7 +365,7 @@ export default function Home() {
       </section >
 
       {/* Projects Grid Section */}
-      < section className="relative py-20 bg-background-light overflow-hidden" >
+      < section className="relative py-20 bg-background-light dark:bg-[#0C142B] overflow-hidden transition-colors duration-300" >
         <OrganicBlob color="leaf" position="bottom-left" size="lg" opacity={0.1} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -373,7 +373,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
               <div>
                 <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-3">ALL PROJECTS</span>
-                <h2 className="text-4xl lg:text-5xl font-bold text-forest mt-3 mb-8 max-w-2xl">
+                <h2 className="text-4xl lg:text-5xl font-bold text-forest dark:text-[#F5F0E1] mt-3 mb-8 max-w-2xl">
                   Restoring ecosystems to secure tomorrow's climate
                 </h2>
               </div>
@@ -406,7 +406,7 @@ export default function Home() {
       </section >
 
       {/* FAQ Section */}
-      < section className="relative py-20 bg-background overflow-hidden" >
+      < section className="relative py-20 bg-background dark:bg-[#0C142B] overflow-hidden transition-colors duration-300" >
         <OrganicBlob color="ocean" position="top-right" size="md" opacity={0.1} />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal variant="slideUp">
@@ -414,10 +414,10 @@ export default function Home() {
               <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-4">
                 FAQ
               </span>
-              <h2 className="text-4xl font-bold text-forest my-8">
+              <h2 className="text-4xl font-bold text-forest dark:text-[#F5F0E1] my-8">
                 Frequently asked questions
               </h2>
-              <p className="text-lg text-forest-light">
+              <p className="text-lg text-forest-light dark:text-[#F3EBC0]">
                 Got questions? We've answered the ones we hear the most.
               </p>
             </div>
@@ -427,20 +427,20 @@ export default function Home() {
       </section >
 
       {/* CTA Section */}
-      < section className="relative py-20 bg-gradient-to-br from-background-light via-background to-background-light overflow-hidden" >
+      < section className="relative py-20 bg-gradient-to-br from-background-light via-background to-background-light dark:from-[#0C142B] dark:via-[#0C142B] dark:to-[#0C142B] overflow-hidden transition-colors duration-300" >
         <OrganicBlob color="golden" position="top-left" size="xl" opacity={0.15} />
         <OrganicBlob color="ocean" position="bottom-right" size="lg" opacity={0.12} />
 
         <div className="max-w-[95%] xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="bg-white/40 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/20 grid lg:grid-cols-2 gap-0">
+          <div className="bg-white/40 dark:bg-[#0f3433]/40 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/20 dark:border-white/10 grid lg:grid-cols-2 gap-0">
             <div className="p-8 md:p-16 flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
               <ScrollReveal variant="slideUp">
-                <h2 className="text-4xl lg:text-5xl font-bold text-forest mb-10">
+                <h2 className="text-4xl lg:text-5xl font-bold text-forest dark:text-[#F5F0E1] mb-10">
                   Ready to restore what nature gave us?
                 </h2>
               </ScrollReveal>
               <ScrollReveal variant="slideUp" delay={0.2}>
-                <p className="text-lg text-forest-light mb-8 max-w-md">
+                <p className="text-lg text-forest-light dark:text-[#F3EBC0] mb-8 max-w-md">
                   Connect with us to align your sustainability goals with real-world impact. Let's restore ecosystems and communities — side by side.
                 </p>
               </ScrollReveal>

@@ -86,7 +86,7 @@ export default function Contact() {
 
 
   return (
-    <div className="min-h-screen bg-[rgb(243,235,212)] relative overflow-hidden">
+    <div className="min-h-screen bg-background dark:bg-[#0C142B] transition-colors duration-300 relative overflow-hidden">
       <Navbar />
 
       <OrganicBlob color="ocean" position="top-right" size="xl" opacity={0.15} />
@@ -104,7 +104,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any }}
-                className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-8"
+                className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold mb-8"
               >
                 Contact us
               </motion.span>
@@ -113,7 +113,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.1 }}
-                className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-10"
+                className="text-5xl md:text-6xl font-bold text-forest dark:text-[#F5F0E1] mb-10"
               >
                 Join the Movement
               </motion.h1>
@@ -122,7 +122,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.2 }}
-                className="text-lg text-[rgb(94,107,100)] mb-12 leading-relaxed"
+                className="text-lg text-forest-light dark:text-[#F3EBC0] mb-12 leading-relaxed"
               >
                 We're glad you're here. Whether you're an individual looking to volunteer, a student eager to intern, or a partner exploring collaboration — we're here to connect. Share your interest and let's build meaningful impact together. Fill in your details and let's get started.
               </motion.p>
@@ -131,7 +131,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.3 }}
-                className="text-md text-[rgb(94,107,100)] mb-6"
+                className="text-md text-forest-light dark:text-[#F3EBC0] mb-6"
               >
                 Not sure where you fit?
               </motion.p>
@@ -152,7 +152,7 @@ export default function Contact() {
             {/* Right Column: Tally Form Embed */}
             <div className="sticky top-24">
               <ScrollReveal>
-                <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-2xl p-2 shadow-2xl min-h-[530px]">
+                <div className="bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl p-2 shadow-2xl min-h-[530px]">
                   <iframe
                     data-tally-src="https://tally.so/embed/mRQL7p?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                     loading="lazy"
@@ -174,14 +174,14 @@ export default function Contact() {
       {/* FAQ Section */}
       <section className="py-20 bg-transparent relative z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 shadow-xl">
+          <div className="bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-xl">
             <div className="text-center mb-12">
               <motion.span
                 initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any }}
-                className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-8"
+                className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold mb-8"
               >
                 FAQ
               </motion.span>
@@ -190,7 +190,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.1 }}
-                className="text-4xl font-bold text-[rgb(19,38,27)] mb-8"
+                className="text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-8"
               >
                 Frequently asked questions
               </motion.h2>
@@ -199,7 +199,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.2 }}
-                className="text-lg text-[rgb(94,107,100)]"
+                className="text-lg text-forest-light dark:text-[#F3EBC0]"
               >
                 Here are the top questions our clients ask before getting started.
               </motion.p>

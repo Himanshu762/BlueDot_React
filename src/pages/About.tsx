@@ -118,7 +118,7 @@ export default function About() {
   const coreTeam = team.slice(1);
 
   return (
-    <div className="bg-[rgb(243,235,212)]">
+    <div className="bg-background dark:bg-[#0C142B] transition-colors duration-300">
       <Navbar />
 
       {/* Intro Section */}
@@ -129,10 +129,10 @@ export default function About() {
               <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold mb-8">
                 About
               </span>
-              <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-10">
+              <h1 className="text-5xl md:text-6xl font-bold text-forest dark:text-[#F5F0E1] mb-10">
                 Our story so far
               </h1>
-              <p className="text-lg text-[rgb(94,107,100)]">
+              <p className="text-lg text-forest-light dark:text-[#F3EBC0]">
                 Meet the team and learn about our mission.
               </p>
             </div>
@@ -140,20 +140,24 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 gap-8 items-center mt-16 max-w-6xl mx-auto">
             <ScrollReveal>
-              <h2 className="text-3xl font-bold text-[rgb(19,38,27)] mb-8">About BlueDot</h2>
-              <p className="text-lg text-[rgb(19,38,27)] leading-relaxed">
+              <h2 className="text-3xl font-bold text-forest dark:text-[#F5F0E1] mb-8">About BlueDot</h2>
+              <p className="text-lg text-forest dark:text-[#F3EBC0] leading-relaxed">
                 BlueDot is a Bangalore-based non-profit organization dedicated to healing Earth's blue ecosystems — rivers, lakes, oceans, and wetlands while protecting the rich wildlife that depends on them. Born out of a deep concern for the accelerating impacts of climate change, we are a collective of environmentalists, scientists, educators, and everyday citizens driven by one goal: to restore what nature gave us and ensure it thrives for generations to come.
               </p>
             </ScrollReveal>
             <ScrollReveal>
-              <div className="relative aspect-square bg-[#3551B4] rounded-2xl p-12 flex items-center justify-center">
-                <img src="/assets/About_logo.avif" alt="BlueDot Logo" className="w-3/4" />
+              <div className="relative aspect-square bg-[#3551B4] dark:bg-[#0f3433] rounded-2xl flex items-center justify-center border border-transparent dark:border-white/10 overflow-hidden">
+                <img
+                  src="/assets/About_logo.avif"
+                  alt="BlueDot Logo"
+                  className="w-full h-full object-cover"
+                />
                 <motion.span
                   variants={verticalFloat}
                   initial="initial"
                   animate="animate"
                   custom={0}
-                  className="absolute top-8 left-8 bg-white/10 text-white text-xs px-3 py-1 rounded-full"
+                  className="absolute top-8 left-8 bg-white/10 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm"
                 >
                   Hands-on action
                 </motion.span>
@@ -162,7 +166,7 @@ export default function About() {
                   initial="initial"
                   animate="animate"
                   custom={0.5}
-                  className="absolute top-16 right-8 bg-white/10 text-white text-xs px-3 py-1 rounded-full"
+                  className="absolute top-16 right-8 bg-white/10 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm"
                 >
                   Community Engagement
                 </motion.span>
@@ -171,7 +175,7 @@ export default function About() {
                   initial="initial"
                   animate="animate"
                   custom={1}
-                  className="absolute bottom-16 left-8 bg-white/10 text-white text-xs px-3 py-1 rounded-full"
+                  className="absolute bottom-16 left-8 bg-white/10 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm"
                 >
                   Scientific research
                 </motion.span>
@@ -180,7 +184,7 @@ export default function About() {
                   initial="initial"
                   animate="animate"
                   custom={1.5}
-                  className="absolute bottom-8 right-8 bg-white/10 text-white text-xs px-3 py-1 rounded-full"
+                  className="absolute bottom-8 right-8 bg-white/10 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm"
                 >
                   Educational Outreach
                 </motion.span>
@@ -191,16 +195,16 @@ export default function About() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-[rgb(243,235,212)]">
+      <section className="py-20 bg-background dark:bg-[#0C142B] transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold mb-8">
               Mission & values
             </span>
-            <h2 className="text-5xl font-bold text-[rgb(19,38,27)] mb-10">
+            <h2 className="text-5xl font-bold text-forest dark:text-[#F5F0E1] mb-10">
               We're on a mission...
             </h2>
-            <p className="text-lg text-[rgb(94,107,100)] leading-relaxed max-w-3xl mx-auto mb-16">
+            <p className="text-lg text-forest-light dark:text-[#F3EBC0] leading-relaxed max-w-3xl mx-auto mb-16">
               ....to conserve and restore water bodies and their surrounding ecosystems through hands-on action, scientific research, community engagement, and educational outreach creating sustainable, climate resilient habitats across India.
             </p>
           </ScrollReveal>
@@ -214,12 +218,12 @@ export default function About() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/90 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white/90 dark:bg-[#0f3433] rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all border border-transparent dark:border-white/10"
               >
                 <div className="mb-4 flex justify-center">
                   <img src={card.image} alt={card.title} className="h-16 w-auto object-contain" />
                 </div>
-                <h3 className="text-xl font-bold text-[rgb(19,38,27)]">
+                <h3 className="text-xl font-bold text-forest dark:text-[#F5F0E1]">
                   {card.title}
                 </h3>
               </motion.div>
@@ -229,20 +233,20 @@ export default function About() {
       </section>
 
       {/* Founder Section */}
-      <section className="py-20 bg-[rgb(243,235,212)]">
+      <section className="py-20 bg-background dark:bg-[#0C142B] transition-colors duration-300">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-12">
               <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold mb-8">
                 Our Team
               </span>
-              <h2 className="text-5xl font-bold text-[rgb(19,38,27)]">
+              <h2 className="text-5xl font-bold text-forest dark:text-[#F5F0E1]">
                 Meet our founder
               </h2>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center bg-white/30 backdrop-blur-md border border-white/20 p-8 rounded-2xl shadow-xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 p-8 rounded-2xl shadow-xl">
             <motion.div
               variants={slideFromLeft}
               initial="hidden"
@@ -262,13 +266,13 @@ export default function About() {
               viewport={{ once: true, amount: 0.3 }}
             >
               <div>
-                <h3 className="text-4xl font-bold text-[rgb(19,38,27)] mb-2">
+                <h3 className="text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-2">
                   {founder.name}
                 </h3>
-                <p className="text-xl text-[rgb(238,185,42)] mb-6 font-semibold">
+                <p className="text-xl text-[#e8bb49] mb-6 font-semibold">
                   {founder.role}
                 </p>
-                <p className="text-[rgb(19,38,27)] leading-relaxed text-sm">
+                <p className="text-forest dark:text-[#F3EBC0] leading-relaxed text-sm">
                   {founder.bio}
                 </p>
               </div>
@@ -278,10 +282,10 @@ export default function About() {
       </section>
 
       {/* Core Team Section */}
-      <section className="py-20 bg-[rgb(243,235,212)]">
+      <section className="py-20 bg-background dark:bg-[#0C142B] transition-colors duration-300">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <h2 className="text-5xl font-bold text-[rgb(19,38,27)] mb-16 text-center">
+            <h2 className="text-5xl font-bold text-forest dark:text-[#F5F0E1] mb-16 text-center">
               Our Core Team
             </h2>
           </ScrollReveal>
@@ -294,7 +298,7 @@ export default function About() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-white/30 backdrop-blur-md border border-white/20 rounded-xl flex items-center shadow-lg hover:shadow-xl transition-shadow overflow-hidden h-32"
+                className="bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-xl flex items-center shadow-lg hover:shadow-xl transition-all overflow-hidden h-32"
               >
                 <img
                   src={member.image}
@@ -302,10 +306,10 @@ export default function About() {
                   className="w-32 h-full object-cover"
                 />
                 <div className="p-4">
-                  <h4 className="font-bold text-[rgb(19,38,27)] text-lg">
+                  <h4 className="font-bold text-forest dark:text-[#F5F0E1] text-lg">
                     {member.name}
                   </h4>
-                  <p className="text-sm text-[rgb(94,107,100)] font-medium">
+                  <p className="text-sm text-forest-light dark:text-[#F3EBC0] font-medium">
                     {member.role}
                   </p>
                 </div>

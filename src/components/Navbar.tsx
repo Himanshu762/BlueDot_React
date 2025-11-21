@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useTheme } from '../context/ThemeContext'
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [hoveredLink, setHoveredLink] = useState<string | null>(null)
   const location = useLocation()
+  const { theme, toggleTheme } = useTheme()
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -47,8 +49,8 @@ export default function Navbar() {
           </motion.div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-2">
-            <div className="flex items-center gap-1 px-3 py-2 rounded-full bg-white/40 backdrop-blur-md border border-white/20 shadow-sm">
+          <div className="hidden md:flex items-center gap-4">
+            <div className="flex items-center gap-1 px-3 py-2 rounded-full bg-white/40 dark:bg-dark-card/40 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-sm transition-colors duration-300">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -74,10 +76,16 @@ export default function Navbar() {
                   {/* Rolling Text */}
                   <div className="relative z-10 h-6 overflow-hidden">
                     <div className="flex flex-col transition-transform duration-300 group-hover:-translate-y-6">
-                      <span className="block h-6 flex items-center text-[#e8bb49]">
+                      <span className={`block h-6 flex items-center ${hoveredLink === link.path || location.pathname === link.path
+                          ? 'text-white'
+                          : 'text-[#e8bb49] dark:text-dark-text-secondary'
+                        }`}>
                         {link.label}
                       </span>
-                      <span className="block h-6 flex items-center text-[#e8bb49]">
+                      <span className={`block h-6 flex items-center ${hoveredLink === link.path || location.pathname === link.path
+                          ? 'text-white'
+                          : 'text-[#e8bb49] dark:text-dark-text-secondary'
+                        }`}>
                         {link.label}
                       </span>
                     </div>
@@ -85,13 +93,44 @@ export default function Navbar() {
                 </Link>
               ))}
             </div>
+
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-white/40 dark:bg-dark-card/40 backdrop-blur-md border border-white/20 dark:border-white/10 text-forest dark:text-dark-text-primary hover:scale-110 transition-all duration-200"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? (
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+              )}
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-4">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-white/40 dark:bg-dark-card/40 backdrop-blur-md border border-white/20 dark:border-white/10 text-forest dark:text-dark-text-primary"
+            >
+              {theme === 'dark' ? (
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+              )}
+            </button>
             <motion.button
               onClick={toggleMobileMenu}
-              className="text-forest hover:text-golden-600 focus:outline-none p-2 rounded-lg bg-white/40 backdrop-blur-md border border-white/20"
+              className="text-forest dark:text-dark-text-primary hover:text-golden-600 focus:outline-none p-2 rounded-lg bg-white/40 dark:bg-dark-card/40 backdrop-blur-md border border-white/20 dark:border-white/10"
               aria-label="Toggle menu"
               whileTap={{ scale: 0.95 }}
             >
@@ -123,7 +162,7 @@ export default function Navbar() {
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
               className="md:hidden pb-4 pt-2 overflow-hidden"
             >
-              <div className="flex flex-col space-y-2 p-3 bg-white/40 backdrop-blur-md rounded-2xl border border-white/20 mt-2">
+              <div className="flex flex-col space-y-2 p-3 bg-white/40 dark:bg-dark-card/40 backdrop-blur-md rounded-2xl border border-white/20 dark:border-white/10 mt-2">
                 {navLinks.map((link, index) => (
                   <motion.div
                     key={link.path}
@@ -137,7 +176,7 @@ export default function Navbar() {
                         block px-4 py-3 rounded-xl font-medium transition-all
                         ${location.pathname === link.path
                           ? 'bg-gradient-to-r from-golden-400 to-golden-500 text-white shadow-md'
-                          : 'text-forest hover:bg-white/60'
+                          : 'text-forest dark:text-dark-text-primary hover:bg-white/60 dark:hover:bg-white/10'
                         }
                       `}
                       onClick={closeMobileMenu}
@@ -146,19 +185,6 @@ export default function Navbar() {
                     </Link>
                   </motion.div>
                 ))}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: navLinks.length * 0.1 }}
-                >
-                  <Link
-                    to="/contact"
-                    className="block bg-gradient-to-r from-ocean-500 to-ocean-600 text-white px-4 py-3 rounded-xl text-center font-semibold shadow-lg"
-                    onClick={closeMobileMenu}
-                  >
-                    Contact Us
-                  </Link>
-                </motion.div>
               </div>
             </motion.div>
           )}
