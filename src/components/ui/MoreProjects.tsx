@@ -59,7 +59,7 @@ export default function MoreProjects({ currentProjectId }: MoreProjectsProps) {
         .slice(0, 3);
 
     return (
-        <section className="py-20 bg-[rgb(243,246,245)]">
+        <section className="py-20 bg-transparent">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="text-3xl font-bold text-[rgb(19,38,27)] mb-12 text-center">
                     More to explore

@@ -53,7 +53,7 @@ export default function Accordion({ items, className = '' }: AccordionProps) {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           transition={{ delay: index * 0.1, duration: 0.4 }}
-          className="bg-[rgb(243,246,245)] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+          className="bg-white/30 backdrop-blur-md border border-white/20 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
           style={{ willChange: 'auto' }}
         >
           <button

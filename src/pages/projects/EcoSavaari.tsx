@@ -122,7 +122,7 @@ export default function EcoSavaari() {
 
             {/* Key Features */}
             <ScrollReveal variant="slideUp" delay={0.6}>
-              <div className="bg-[rgb(243,246,245)] rounded-xl p-8 my-12">
+              <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-xl p-8 my-12">
                 <h3 className="text-2xl font-bold text-[rgb(19,38,27)] mb-6">Program Highlights</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[
