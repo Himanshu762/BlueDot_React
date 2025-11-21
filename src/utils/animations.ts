@@ -59,6 +59,42 @@ export const slideDown: Variants = {
   },
 }
 
+// Framer-style slide left (translateX: 50px initial)
+export const slideLeft: Variants = {
+  hidden: {
+    opacity: 0,
+    x: 50,
+    willChange: 'transform',
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    willChange: 'auto',
+    transition: {
+      duration: ANIMATION_DURATION,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
+}
+
+// Framer-style slide right (translateX: -50px initial)
+export const slideRight: Variants = {
+  hidden: {
+    opacity: 0,
+    x: -50,
+    willChange: 'transform',
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    willChange: 'auto',
+    transition: {
+      duration: ANIMATION_DURATION,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
+}
+
 // Scale animation with slide
 export const scaleIn: Variants = {
   hidden: {

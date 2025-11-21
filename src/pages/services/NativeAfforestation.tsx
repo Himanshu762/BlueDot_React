@@ -3,6 +3,7 @@ import Footer from '../../components/Footer'
 import OrganicBlob from '../../components/ui/OrganicBlob'
 import ScrollReveal from '../../components/ui/ScrollReveal'
 import CtaSection from '../../components/ui/CTASection'
+import AnimatedImage from '../../components/ui/AnimatedImage'
 
 export default function NativeAfforestation() {
   return (
@@ -15,18 +16,32 @@ export default function NativeAfforestation() {
         <OrganicBlob color="golden" position="bottom-right" size="lg" opacity={0.12} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <ScrollReveal>
-              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
-                Service
-              </span>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-forest mb-8">
-                Native Afforestation
-              </h1>
-              <p className="text-xl md:text-2xl text-forest-light leading-relaxed">
-                Restoring ecosystems with native species that co-evolved with the land.
-              </p>
-            </ScrollReveal>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <ScrollReveal>
+                <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
+                  Service
+                </span>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-forest mb-8">
+                  Native Afforestation
+                </h1>
+                <p className="text-xl md:text-2xl text-forest-light leading-relaxed">
+                  Restoring ecosystems with native species that co-evolved with the land.
+                </p>
+              </ScrollReveal>
+            </div>
+            <div className="relative">
+              <ScrollReveal variant="slideLeft" delay={0.2}>
+                <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20 aspect-[4/3]">
+                  <AnimatedImage
+                    src="/assets/Home_Portfolio_Vruksha.avif"
+                    alt="Native Afforestation"
+                    className="w-full h-full object-cover object-center"
+                    priority
+                  />
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>

@@ -5,11 +5,11 @@
 
 import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
-import { scrollFadeIn, slideUp, slideDown, scaleIn, viewportSettings } from '../../utils/animations'
+import { scrollFadeIn, slideUp, slideDown, slideLeft, slideRight, scaleIn, viewportSettings } from '../../utils/animations'
 
 interface ScrollRevealProps {
   children: ReactNode
-  variant?: 'fadeIn' | 'slideUp' | 'slideDown' | 'scaleIn'
+  variant?: 'fadeIn' | 'slideUp' | 'slideDown' | 'slideLeft' | 'slideRight' | 'scaleIn'
   delay?: number
   className?: string
   once?: boolean
@@ -26,6 +26,8 @@ export default function ScrollReveal({
     fadeIn: scrollFadeIn,
     slideUp: slideUp,
     slideDown: slideDown,
+    slideLeft: slideLeft,
+    slideRight: slideRight,
     scaleIn: scaleIn,
   }
 
