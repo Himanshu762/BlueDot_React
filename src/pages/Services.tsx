@@ -39,10 +39,10 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="text-center max-w-4xl mx-auto">
             <ScrollReveal>
-              <span className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-6">
+              <span className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-8">
                 Services
               </span>
-              <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-10">
                 Restoring Ecosystems, Empowering Communities
               </h1>
               <p className="text-xl text-[rgb(94,107,100)]">
@@ -75,7 +75,7 @@ export default function Services() {
                     </div>
 
                     <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                      <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-6 group-hover:text-[#3551B4] transition-colors">
+                      <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-8 group-hover:text-[#3551B4] transition-colors">
                         {service.title}
                       </h2>
                       <p className="text-lg text-[rgb(19,38,27)] leading-relaxed">

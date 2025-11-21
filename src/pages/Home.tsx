@@ -211,7 +211,7 @@ export default function Home() {
           >
             {/* Main Headline */}
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-forest mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-forest mb-8 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -223,7 +223,7 @@ export default function Home() {
 
             {/* Subtitle */}
             <motion.p
-              className="text-base md:text-lg text-forest-light mb-10 max-w-2xl mx-auto leading-relaxed"
+              className="text-base md:text-lg text-forest-light mb-12 max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
@@ -285,12 +285,12 @@ export default function Home() {
 
             <WordReveal
               text="We are a Bangalore-based non-profit organization dedicated to healing Earth's blue ecosystems through grassroots environmental action that delivers real measurable impact"
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-forest mt-6 mb-8 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-forest mt-6 mb-12 leading-tight"
               as="h2"
             />
 
             <ScrollReveal variant="slideUp" delay={1.5}>
-              <MagneticButton href="/about" variant="secondary" size="lg">
+              <MagneticButton href="/about" variant="primary" size="lg">
                 Learn More About Us
               </MagneticButton>
             </ScrollReveal>
@@ -302,7 +302,7 @@ export default function Home() {
       < section className="py-16 bg-background-light" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fadeIn">
-            <h3 className="text-center text-sm font-semibold text-forest-light uppercase tracking-widest mb-12">
+            <h3 className="text-center text-sm font-semibold text-forest-light uppercase tracking-widest mb-16">
               TRUSTED BY
             </h3>
           </ScrollReveal>
@@ -319,7 +319,7 @@ export default function Home() {
               <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-4">
                 OUR SERVICES
               </span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-forest mt-4 mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-forest mt-4 mb-10">
                 Where Strategy Meets Impact
               </h2>
               <p className="text-lg text-forest-light">
@@ -374,7 +374,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
               <div>
                 <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-3">ALL PROJECTS</span>
-                <h2 className="text-4xl lg:text-5xl font-bold text-forest mt-3 mb-4 max-w-2xl">
+                <h2 className="text-4xl lg:text-5xl font-bold text-forest mt-3 mb-8 max-w-2xl">
                   Restoring ecosystems to secure tomorrow's climate
                 </h2>
               </div>
@@ -415,7 +415,7 @@ export default function Home() {
               <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-4">
                 FAQ
               </span>
-              <h2 className="text-4xl font-bold text-forest my-4">
+              <h2 className="text-4xl font-bold text-forest my-8">
                 Frequently asked questions
               </h2>
               <p className="text-lg text-forest-light">
@@ -436,7 +436,7 @@ export default function Home() {
           <div className="bg-white/40 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/20 grid lg:grid-cols-2 gap-0">
             <div className="p-8 md:p-16 flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
               <ScrollReveal variant="slideUp">
-                <h2 className="text-4xl lg:text-5xl font-bold text-forest mb-6">
+                <h2 className="text-4xl lg:text-5xl font-bold text-forest mb-10">
                   Ready to restore what nature gave us?
                 </h2>
               </ScrollReveal>

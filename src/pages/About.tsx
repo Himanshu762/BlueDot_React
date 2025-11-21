@@ -126,10 +126,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
-              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold mb-6">
+              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold mb-8">
                 About
               </span>
-              <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-10">
                 Our story so far
               </h1>
               <p className="text-lg text-[rgb(94,107,100)]">
@@ -140,7 +140,7 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 gap-8 items-center mt-16 max-w-6xl mx-auto">
             <ScrollReveal>
-              <h2 className="text-3xl font-bold text-[rgb(19,38,27)] mb-4">About BlueDot</h2>
+              <h2 className="text-3xl font-bold text-[rgb(19,38,27)] mb-8">About BlueDot</h2>
               <p className="text-lg text-[rgb(19,38,27)] leading-relaxed">
                 BlueDot is a Bangalore-based non-profit organization dedicated to healing Earth's blue ecosystems — rivers, lakes, oceans, and wetlands while protecting the rich wildlife that depends on them. Born out of a deep concern for the accelerating impacts of climate change, we are a collective of environmentalists, scientists, educators, and everyday citizens driven by one goal: to restore what nature gave us and ensure it thrives for generations to come.
               </p>
@@ -194,13 +194,13 @@ export default function About() {
       <section className="py-20 bg-[rgb(243,235,212)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold mb-6">
+            <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold mb-8">
               Mission & values
             </span>
-            <h2 className="text-5xl font-bold text-[rgb(19,38,27)] mb-6">
+            <h2 className="text-5xl font-bold text-[rgb(19,38,27)] mb-10">
               We're on a mission...
             </h2>
-            <p className="text-lg text-[rgb(94,107,100)] leading-relaxed max-w-3xl mx-auto mb-12">
+            <p className="text-lg text-[rgb(94,107,100)] leading-relaxed max-w-3xl mx-auto mb-16">
               ....to conserve and restore water bodies and their surrounding ecosystems through hands-on action, scientific research, community engagement, and educational outreach creating sustainable, climate resilient habitats across India.
             </p>
           </ScrollReveal>
@@ -233,7 +233,7 @@ export default function About() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold mb-6">
+              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold mb-8">
                 Our Team
               </span>
               <h2 className="text-5xl font-bold text-[rgb(19,38,27)]">
@@ -281,7 +281,7 @@ export default function About() {
       <section className="py-20 bg-[rgb(243,235,212)]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <h2 className="text-5xl font-bold text-[rgb(19,38,27)] mb-12 text-center">
+            <h2 className="text-5xl font-bold text-[rgb(19,38,27)] mb-16 text-center">
               Our Core Team
             </h2>
           </ScrollReveal>

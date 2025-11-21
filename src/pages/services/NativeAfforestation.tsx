@@ -11,7 +11,7 @@ export default function NativeAfforestation() {
       <section className="relative pt-20 pb-16 bg-[rgb(243,235,212)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-10">
               Native Afforestation
             </h1>
             <p className="text-xl text-[rgb(94,107,100)]">
@@ -24,7 +24,7 @@ export default function NativeAfforestation() {
       {/* Problem Section */}
       <section className="py-20 bg-[rgb(243,235,212)]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-8">
+          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
             The Problem
           </h2>
           <p className="text-xl text-[rgb(19,38,27)] leading-relaxed">
@@ -36,7 +36,7 @@ export default function NativeAfforestation() {
       {/* Solution Section */}
       <section className="py-20 bg-transparent">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-8">
+          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
             Our Solution
           </h2>
           <p className="text-xl text-[rgb(19,38,27)] leading-relaxed mb-4">
@@ -48,7 +48,7 @@ export default function NativeAfforestation() {
       {/* Why It Works Section */}
       <section className="py-20 bg-[rgb(243,235,212)]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-8">
+          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
             Why It Works
           </h2>
           <div className="space-y-6">
@@ -77,7 +77,7 @@ export default function NativeAfforestation() {
       {/* Impact Section */}
       <section className="py-20 bg-transparent">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-8">
+          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
             Our Impact So Far
           </h2>
           <div className="space-y-6">
@@ -106,7 +106,7 @@ export default function NativeAfforestation() {
       {/* Difference Section */}
       <section className="py-20 bg-[rgb(243,235,212)]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-8">
+          <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-12">
             Our Difference
           </h2>
           <p className="text-xl text-[rgb(19,38,27)] leading-relaxed">
@@ -118,7 +118,7 @@ export default function NativeAfforestation() {
       {/* CTA Section */}
       <section className="py-20 bg-[#3551B4] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl font-bold mb-10">
             Grow Forests That Last
           </h2>
           <p className="text-xl mb-8">

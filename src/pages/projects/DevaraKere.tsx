@@ -21,7 +21,7 @@ export default function DevaraKereRestoration() {
                 May 11, 2025
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-8">
+            <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-10">
               Devara Kere Restoration
             </h1>
           </div>
@@ -32,7 +32,7 @@ export default function DevaraKereRestoration() {
       <section className="py-20 bg-[rgb(243,235,212)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-[rgb(19,38,27)] leading-relaxed mb-8">
+            <p className="text-xl text-[rgb(19,38,27)] leading-relaxed mb-12">
               The climate crisis isn't a distant threat — it's already here, showing up as floods, droughts, rising temperatures, and disappearing species. Clean water bodies and thriving ecosystems are essential in combating these effects. When we restore a river, replant a mangrove, or save a species, we're not just protecting nature, we're protecting ourselves.
             </p>
           </div>

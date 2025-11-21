@@ -100,7 +100,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any }}
-                className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-6"
+                className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-8"
               >
                 Contact us
               </motion.span>
@@ -109,7 +109,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.1 }}
-                className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-6"
+                className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-10"
               >
                 Join the Movement
               </motion.h1>
@@ -118,7 +118,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.2 }}
-                className="text-lg text-[rgb(94,107,100)] mb-8 leading-relaxed"
+                className="text-lg text-[rgb(94,107,100)] mb-12 leading-relaxed"
               >
                 We're glad you're here. Whether you're an individual looking to volunteer, a student eager to intern, or a partner exploring collaboration — we're here to connect. Share your interest and let's build meaningful impact together. Fill in your details and let's get started.
               </motion.p>
@@ -176,7 +176,7 @@ export default function Contact() {
               whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any }}
-              className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-6"
+              className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-8"
             >
               FAQ
             </motion.span>
@@ -185,7 +185,7 @@ export default function Contact() {
               whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.1 }}
-              className="text-4xl font-bold text-[rgb(19,38,27)] mb-4"
+              className="text-4xl font-bold text-[rgb(19,38,27)] mb-8"
             >
               Frequently asked questions
             </motion.h2>

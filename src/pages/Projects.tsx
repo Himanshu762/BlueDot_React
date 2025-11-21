@@ -106,10 +106,10 @@ export default function Projects() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="text-center max-w-4xl mx-auto">
             <ScrollReveal>
-              <span className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-6">
+              <span className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] text-[#3551B4] rounded-full text-sm font-semibold mb-8">
                 Projects
               </span>
-              <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-10">
                 BlueDot Journal
               </h1>
               <p className="text-xl text-[rgb(94,107,100)]">

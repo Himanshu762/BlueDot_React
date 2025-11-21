@@ -58,7 +58,7 @@ export default function EcoSavaari() {
               </StaggerItem>
 
               <StaggerItem>
-                <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-8">
+                <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-10">
                   Eco Savaari
                 </h1>
               </StaggerItem>
@@ -103,7 +103,7 @@ export default function EcoSavaari() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
             <ScrollReveal variant="slideUp">
-              <h2 className="text-3xl font-bold text-[rgb(19,38,27)] mb-6">
+              <h2 className="text-3xl font-bold text-[rgb(19,38,27)] mb-10">
                 Bringing Wildlife Education to Rural India
               </h2>
             </ScrollReveal>
@@ -123,7 +123,7 @@ export default function EcoSavaari() {
             {/* Key Features */}
             <ScrollReveal variant="slideUp" delay={0.6}>
               <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-xl p-8 my-12">
-                <h3 className="text-2xl font-bold text-[rgb(19,38,27)] mb-6">Program Highlights</h3>
+                <h3 className="text-2xl font-bold text-[rgb(19,38,27)] mb-10">Program Highlights</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[
                     { icon: '🚐', title: 'Mobile Learning Unit', description: 'Fully equipped van with educational materials and AV tools' },
@@ -151,7 +151,7 @@ export default function EcoSavaari() {
             </ScrollReveal>
 
             <ScrollReveal variant="slideUp" delay={0.8}>
-              <h3 className="text-2xl font-bold text-[rgb(19,38,27)] mb-4">
+              <h3 className="text-2xl font-bold text-[rgb(19,38,27)] mb-8">
                 Addressing Critical Challenges
               </h3>
             </ScrollReveal>
@@ -175,7 +175,7 @@ export default function EcoSavaari() {
       <section className="py-20 bg-[#3551B4] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="slideUp">
-            <h2 className="text-4xl font-bold mb-12 text-center">
+            <h2 className="text-4xl font-bold mb-16 text-center">
               Impact at a Glance
             </h2>
           </ScrollReveal>
@@ -207,7 +207,7 @@ export default function EcoSavaari() {
       <section className="py-20 bg-[rgb(243,235,212)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal variant="slideUp">
-            <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-6">
+            <h2 className="text-4xl font-bold text-[rgb(19,38,27)] mb-10">
               Want to Support Eco Savaari?
             </h2>
           </ScrollReveal>
