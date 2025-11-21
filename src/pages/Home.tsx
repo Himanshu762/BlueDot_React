@@ -295,9 +295,9 @@ export default function Home() {
       < section className="py-16 bg-background-light" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal variant="fadeIn">
-            <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold uppercase tracking-wide">
+            <h3 className="text-center text-sm font-semibold text-forest-light uppercase tracking-widest mb-12">
               TRUSTED BY
-            </span>
+            </h3>
           </ScrollReveal>
           <PartnerCarousel partners={partners} />
         </div>
