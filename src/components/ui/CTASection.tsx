@@ -14,7 +14,7 @@ const ctaImages = [
 export default function CtaSection() {
     return (
         <section className="py-20 bg-transparent">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="bg-white/40 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/20 grid lg:grid-cols-2 gap-0">
                     <div className="p-8 md:p-16 flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
                         <ScrollReveal variant="slideUp">

@@ -49,8 +49,8 @@ export default function MagneticButton({
   };
 
   const variantStyles = {
-    primary: 'bg-[#3c4faf] text-[#e8bb49] shadow-lg shadow-ocean-500/30 hover:shadow-xl hover:shadow-ocean-500/40',
-    secondary: 'bg-gradient-to-r from-ocean-500 to-ocean-600 text-[#e8bb49] shadow-lg shadow-ocean-500/30 hover:shadow-xl hover:shadow-ocean-500/40',
+    primary: 'bg-[#3c4faf] text-[#f3ecd9] shadow-lg shadow-ocean-500/30 hover:shadow-xl hover:shadow-ocean-500/40',
+    secondary: 'bg-gradient-to-r from-ocean-500 to-ocean-600 text-[#f3ecd9] shadow-lg shadow-ocean-500/30 hover:shadow-xl hover:shadow-ocean-500/40',
     outline: 'border-2 border-[#e8bb49] text-[#e8bb49] hover:bg-golden-50',
   };
 
@@ -98,7 +98,7 @@ export default function MagneticButton({
           hover: { x: 4 }
         }}
         transition={{ duration: 0.2 }}
-        className="inline-block text-[#e8bb49]"
+        className="inline-block text-current"
       >
         →
       </motion.span>

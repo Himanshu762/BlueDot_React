@@ -5,8 +5,8 @@ import Footer from '../../components/Footer'
 import Carousel from '../../components/ui/Carousel'
 import AnimatedImage from '../../components/ui/AnimatedImage'
 import ScrollReveal, { StaggerContainer, StaggerItem } from '../../components/ui/ScrollReveal'
-import { CompactCard } from '../../components/ui/FeaturedCard'
 import { buttonHover } from '../../utils/animations'
+import MoreProjects from '../../components/ui/MoreProjects'
 
 export default function EcoSavaari() {
   // Image gallery for this project
@@ -17,33 +17,7 @@ export default function EcoSavaari() {
     '/assets/Home_project_lake.webp',
   ]
 
-  // Related projects
-  const relatedProjects = [
-    {
-      title: 'Turahalli Forest Cleanup Drive',
-      description: "Community-led cleanup to protect Bengaluru's last forest patch.",
-      image: '/assets/Home_Portfolio_Thurahalli.avif',
-      date: 'Jun 14, 2025',
-      category: 'Cleanup Drives',
-      link: '/projects/turahalli-forest-cleanup-drive'
-    },
-    {
-      title: 'Mangrove Plantation - Chennai',
-      description: "Reviving Chennai's mangroves for urban ecological resilience.",
-      image: '/assets/Home_Portfolio_Mangrove.avif',
-      date: 'May 4, 2025',
-      category: 'Conservation',
-      link: '/projects/mangrove-plantation-chennai'
-    },
-    {
-      title: 'Laksha Vruksha',
-      description: 'Restoring ecosystems one native tree at a time.',
-      image: '/assets/Home_Portfolio_Vruksha.avif',
-      date: 'Mar 16, 2025',
-      category: 'Afforestation',
-      link: '/projects/laksha-vruksha'
-    }
-  ]
+
 
   const impactStats = [
     { number: '12+', label: 'Districts Covered' },
@@ -227,24 +201,7 @@ export default function EcoSavaari() {
         </div>
       </section>
 
-      {/* Related Projects Carousel */}
-      <section className="py-20 bg-[rgb(243,246,245)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal variant="slideUp">
-            <h2 className="text-3xl font-bold text-[rgb(19,38,27)] mb-12 text-center">
-              More Projects to Explore
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {relatedProjects.map((project, index) => (
-              <ScrollReveal key={index} variant="slideUp" delay={index * 0.1}>
-                <CompactCard {...project} />
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <MoreProjects currentProjectId="eco-savaari" />
 
       {/* CTA Section */}
       <section className="py-20 bg-[rgb(243,235,212)]">

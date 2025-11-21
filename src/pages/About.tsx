@@ -126,7 +126,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
-              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold mb-6">
+              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold mb-6">
                 About
               </span>
               <h1 className="text-5xl md:text-6xl font-bold text-[rgb(19,38,27)] mb-6">
@@ -216,7 +216,9 @@ export default function About() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white/90 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="text-5xl mb-4 text-[#3551B4]">{card.image}</div>
+                <div className="mb-4 flex justify-center">
+                  <img src={card.image} alt={card.title} className="h-16 w-auto object-contain" />
+                </div>
                 <h3 className="text-xl font-bold text-[rgb(19,38,27)]">
                   {card.title}
                 </h3>
@@ -231,7 +233,7 @@ export default function About() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold mb-6">
+              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold mb-6">
                 Our Team
               </span>
               <h2 className="text-5xl font-bold text-[rgb(19,38,27)]">
@@ -297,7 +299,7 @@ export default function About() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-14 h-14 object-cover rounded-full"
+                  className="w-14 h-14 object-cover rounded-xl"
                 />
                 <h4 className="font-bold text-[rgb(19,38,27)] text-lg">
                   {member.name}

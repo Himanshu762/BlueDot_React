@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* About Section */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-3">
             <img
               src="/assets/footer_logo.png"
               alt="BlueDot Logo"
@@ -81,73 +81,28 @@ export default function Footer() {
             <h4 className="text-sm font-semibold mb-4 uppercase tracking-wider">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="group block w-fit relative overflow-hidden">
-                  <div className="h-5 overflow-hidden">
-                    <div className="flex flex-col transition-transform duration-300 group-hover:-translate-y-5">
-                      <span className="block h-5 flex items-center text-white/70 group-hover:text-[#e8bb49] transition-colors">
-                        Home
-                      </span>
-                      <span className="block h-5 flex items-center text-white/70 group-hover:text-[#e8bb49] transition-colors">
-                        Home
-                      </span>
-                    </div>
-                  </div>
+                <Link to="/" className="group block w-fit">
+                  <RollingText text="Home" height={20} className="text-white/70 group-hover:text-[#e8bb49] transition-colors" />
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="group block w-fit relative overflow-hidden">
-                  <div className="h-5 overflow-hidden">
-                    <div className="flex flex-col transition-transform duration-300 group-hover:-translate-y-5">
-                      <span className="block h-5 flex items-center text-white/70 group-hover:text-[#e8bb49] transition-colors">
-                        About Us
-                      </span>
-                      <span className="block h-5 flex items-center text-white/70 group-hover:text-[#e8bb49] transition-colors">
-                        About Us
-                      </span>
-                    </div>
-                  </div>
+                <Link to="/about" className="group block w-fit">
+                  <RollingText text="About Us" height={20} className="text-white/70 group-hover:text-[#e8bb49] transition-colors" />
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="group block w-fit relative overflow-hidden">
-                  <div className="h-5 overflow-hidden">
-                    <div className="flex flex-col transition-transform duration-300 group-hover:-translate-y-5">
-                      <span className="block h-5 flex items-center text-white/70 group-hover:text-[#e8bb49] transition-colors">
-                        Our Services
-                      </span>
-                      <span className="block h-5 flex items-center text-white/70 group-hover:text-[#e8bb49] transition-colors">
-                        Our Services
-                      </span>
-                    </div>
-                  </div>
+                <Link to="/services" className="group block w-fit">
+                  <RollingText text="Our Services" height={20} className="text-white/70 group-hover:text-[#e8bb49] transition-colors" />
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="group block w-fit relative overflow-hidden">
-                  <div className="h-5 overflow-hidden">
-                    <div className="flex flex-col transition-transform duration-300 group-hover:-translate-y-5">
-                      <span className="block h-5 flex items-center text-white/70 group-hover:text-[#e8bb49] transition-colors">
-                        Blog
-                      </span>
-                      <span className="block h-5 flex items-center text-white/70 group-hover:text-[#e8bb49] transition-colors">
-                        Blog
-                      </span>
-                    </div>
-                  </div>
+                <Link to="/blog" className="group block w-fit">
+                  <RollingText text="Blog" height={20} className="text-white/70 group-hover:text-[#e8bb49] transition-colors" />
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="group block w-fit relative overflow-hidden">
-                  <div className="h-5 overflow-hidden">
-                    <div className="flex flex-col transition-transform duration-300 group-hover:-translate-y-5">
-                      <span className="block h-5 flex items-center text-white/70 group-hover:text-[#e8bb49] transition-colors">
-                        Contact
-                      </span>
-                      <span className="block h-5 flex items-center text-white/70 group-hover:text-[#e8bb49] transition-colors">
-                        Contact
-                      </span>
-                    </div>
-                  </div>
+                <Link to="/contact" className="group block w-fit">
+                  <RollingText text="Contact" height={20} className="text-white/70 group-hover:text-[#e8bb49] transition-colors" />
                 </Link>
               </li>
             </ul>

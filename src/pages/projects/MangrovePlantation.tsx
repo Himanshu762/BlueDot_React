@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom'
+
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import CtaSection from '../../components/ui/CTASection'
+import MoreProjects from '../../components/ui/MoreProjects'
 
 export default function MangrovePlantation() {
   return (
@@ -49,22 +50,7 @@ export default function MangrovePlantation() {
         </div>
       </section>
 
-      {/* More to Explore Section */}
-      <section className="py-20 bg-[rgb(243,246,245)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[rgb(19,38,27)] mb-8 text-center">
-            More to explore
-          </h2>
-          <div className="flex justify-center">
-            <Link
-              to="/projects"
-              className="inline-block px-8 py-4 bg-[rgb(238,185,42)] text-[rgb(19,38,27)] rounded-lg hover:bg-[#3551B4] hover:text-white transition text-lg font-semibold"
-            >
-              View All Projects
-            </Link>
-          </div>
-        </div>
-      </section>
+      <MoreProjects currentProjectId="mangrove-plantation-chennai" />
 
       <CtaSection />
 
