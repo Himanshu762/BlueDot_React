@@ -12,12 +12,17 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const [theme, setTheme] = useState<Theme>(() => {
         // Check local storage first
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark' || savedTheme === 'light') {
-            return savedTheme;
+        try {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || savedTheme === 'light') {
+                return savedTheme;
+            }
+        } catch (e) {
+            console.error('Failed to read from localStorage', e);
         }
+
         // Check system preference
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             return 'dark';
         }
         return 'light';
@@ -25,9 +30,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     useEffect(() => {
         const root = window.document.documentElement;
-        root.classList.remove('light', 'dark');
-        root.classList.add(theme);
+        if (theme === 'dark') {
+            root.classList.add('dark');
+        } else {
+            root.classList.remove('dark');
+        }
         localStorage.setItem('theme', theme);
+        console.log('Theme toggled to:', theme);
     }, [theme]);
 
     const toggleTheme = () => {
