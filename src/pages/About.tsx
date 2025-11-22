@@ -118,7 +118,7 @@ export default function About() {
   const coreTeam = team.slice(1);
 
   return (
-    <div className="bg-background dark:bg-[#0C142B] transition-colors duration-300">
+    <div className="transition-colors duration-300">
       <Navbar />
 
       {/* Intro Section */}

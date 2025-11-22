@@ -86,7 +86,7 @@ export default function Contact() {
 
 
   return (
-    <div className="min-h-screen bg-background dark:bg-[#0C142B] transition-colors duration-300 relative overflow-hidden">
+    <div className="min-h-screen transition-colors duration-300 relative overflow-hidden">
       <Navbar />
 
       <OrganicBlob color="ocean" position="top-right" size="xl" opacity={0.15} />

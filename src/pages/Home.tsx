@@ -178,7 +178,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-background dark:bg-[#0C142B] text-forest dark:text-[#F5F0E1] transition-colors duration-300">
+    <div className="min-h-screen transition-colors duration-300">
       <Navbar />
 
       {/* Hero Section - Immersive with Organic Blobs */}

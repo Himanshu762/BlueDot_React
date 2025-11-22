@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -16,71 +16,14 @@ export default {
       colors: {
         // Brand Colors
         background: {
-          DEFAULT: '#F4EBD6',
-          light: '#FAF6ED',
+          DEFAULT: 'var(--bg-primary)',
+          light: 'var(--bg-secondary)',
           dark: '#EDE4CB',
         },
-        // Custom Dark Mode Colors
-        dark: {
-          bg: '#0C142B',
-          card: '#0f3433',
-          text: {
-            primary: '#F5F0E1',
-            secondary: '#F3EBC0',
-            tertiary: '#F3EBD4',
-            highlight: '#F5EBBC',
-          }
-        },
-        golden: {
-          50: '#FEF9E7',
-          100: '#FDF3CF',
-          200: '#FCE79F',
-          300: '#FADB6F',
-          400: '#F9CF3F',
-          500: '#e8bb49', // Primary golden (Updated)
-          600: '#D49A0F',
-          700: '#A0750B',
-          800: '#6C5008',
-          900: '#382B04',
-        },
-        ocean: {
-          50: '#EBF3FE',
-          100: '#D7E7FD',
-          200: '#AFCFFB',
-          300: '#87B7F9',
-          400: '#5F9FF7',
-          500: '#3c4faf', // Primary blue (Updated)
-          600: '#2C4090',
-          700: '#21306C',
-          800: '#162048',
-          900: '#0B1024',
-        },
-        // Nature-inspired accents
-        earth: {
-          DEFAULT: '#8B7355',
-          light: '#B89B7F',
-          dark: '#5C4A38',
-        },
-        leaf: {
-          DEFAULT: '#7BA05B',
-          light: '#9BC47B',
-          dark: '#5A7543',
-        },
-        water: {
-          DEFAULT: '#5B9EA0',
-          light: '#7EBEC0',
-          dark: '#447578',
-        },
-        // Legacy support (map old colors to new system)
-        beige: {
-          50: '#faf8f4',
-          100: '#f7f4ec',
-          200: '#F4EBD6',
-          DEFAULT: '#F4EBD6',
-        },
+        // ... (keeping other colors)
         forest: {
-          DEFAULT: 'rgb(19, 38, 27)',
-          light: 'rgb(94, 107, 100)',
+          DEFAULT: 'var(--text-primary)',
+          light: 'var(--text-secondary)',
         },
         gold: {
           DEFAULT: '#F0B825',

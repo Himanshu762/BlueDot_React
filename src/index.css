@@ -8,13 +8,28 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --bg-primary: #F4EBD6;
+  --bg-secondary: #FAF6ED;
+  --text-primary: rgb(19, 38, 27);
+  --text-secondary: rgb(94, 107, 100);
+}
+
+.dark {
+  --bg-primary: #0C142B;
+  --bg-secondary: #0C142B;
+  /* Match primary in dark mode for seamless look, or use #0f3433 for contrast */
+  --text-primary: #F5F0E1;
+  --text-secondary: #F3EBC0;
+}
+
 body {
   margin: 0;
   font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F4EBD6;
-  color: rgb(19, 38, 27);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 

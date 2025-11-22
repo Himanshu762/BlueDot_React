@@ -31,7 +31,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen bg-background dark:bg-[#0C142B] transition-colors duration-300">
+    <div className="min-h-screen transition-colors duration-300">
       <Navbar />
 
       {/* Hero Section */}
