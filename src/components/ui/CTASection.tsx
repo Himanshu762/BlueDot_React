@@ -20,7 +20,7 @@ export default function CtaSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div
                     className="backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-card grid lg:grid-cols-2 gap-0 transition-colors duration-300"
-                    style={{ backgroundColor: theme === 'dark' ? '#0f3433' : 'rgba(255, 255, 255, 0.95)' }}
+                    style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
                 >
                     <div className="p-8 md:p-16 flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
                         <ScrollReveal variant="slideUp">
