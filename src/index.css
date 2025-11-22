@@ -13,7 +13,7 @@ html {
   --bg-secondary: #FAF6ED;
   --text-primary: rgb(19, 38, 27);
   --text-secondary: rgb(94, 107, 100);
-  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card: rgba(255, 255, 255, 0.95);
   --border-card: rgba(255, 255, 255, 0.6);
 }
 

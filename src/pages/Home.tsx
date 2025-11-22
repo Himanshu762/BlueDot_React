@@ -12,6 +12,7 @@ import MagneticButton from '../components/ui/MagneticButton';
 import OrbitingArrowButton from '../components/ui/OrbitingArrowButton';
 import { imageZoomOutReveal } from '../utils/customAnimations';
 import { getCategoryColor, categoryTextColor } from '../utils/projectStyles';
+import { useTheme } from '../context/ThemeContext';
 
 // Enhanced Project Card
 function ProjectCard({ title, description, image, date, category, link }: {
@@ -66,6 +67,7 @@ function ProjectCard({ title, description, image, date, category, link }: {
 }
 
 export default function Home() {
+  const { theme } = useTheme();
   const projects = [
     {
       title: 'Eco Savaari',
@@ -299,8 +301,14 @@ export default function Home() {
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+
+
             {partners.map((partner, index) => (
-              <div key={index} className="w-48 h-28 flex items-center justify-center p-2 bg-card backdrop-blur-sm border border-card rounded-xl transition-all duration-300">
+              <div
+                key={index}
+                className="w-48 h-28 flex items-center justify-center p-2 backdrop-blur-sm border border-card rounded-xl transition-all duration-300"
+                style={{ backgroundColor: theme === 'dark' ? '#0f3433' : 'rgba(255, 255, 255, 0.95)' }}
+              >
                 <img
                   src={partner.logo}
                   alt={partner.name}

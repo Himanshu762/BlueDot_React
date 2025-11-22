@@ -37,8 +37,13 @@ interface AccordionProps {
   className?: string
 }
 
+import { useTheme } from '../../context/ThemeContext';
+
+// ... (keep existing imports)
+
 export default function Accordion({ items, className = '' }: AccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const { theme } = useTheme()
 
   const toggleItem = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -53,8 +58,11 @@ export default function Accordion({ items, className = '' }: AccordionProps) {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           transition={{ delay: index * 0.1, duration: 0.4 }}
-          className="bg-card backdrop-blur-md border border-card rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
-          style={{ willChange: 'auto' }}
+          className="backdrop-blur-md border border-card rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+          style={{
+            willChange: 'auto',
+            backgroundColor: theme === 'dark' ? '#0f3433' : 'rgba(255, 255, 255, 0.95)'
+          }}
         >
           <button
             onClick={() => toggleItem(index)}
