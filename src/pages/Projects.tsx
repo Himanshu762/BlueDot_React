@@ -8,7 +8,12 @@ import CtaSection from '../components/ui/CTASection';
 import { getCategoryColor, categoryTextColor } from '../utils/projectStyles';
 
 // A card component styled to match the design
+import { useTheme } from '../context/ThemeContext';
+
+// ... (keep existing imports)
+
 function ProjectCard({ title, description, image, date, category, link }: {
+  // ... (keep existing types)
   title: string;
   description: string;
   image: string;
@@ -16,12 +21,14 @@ function ProjectCard({ title, description, image, date, category, link }: {
   category: string;
   link: string;
 }) {
+  const { theme } = useTheme();
   return (
     <Link to={link} className="group block">
       <motion.div
         whileHover={{ y: -8 }}
         transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-        className="bg-card backdrop-blur-md border border-card rounded-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all h-full flex flex-col"
+        className="backdrop-blur-md border border-card rounded-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all h-full flex flex-col"
+        style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
       >
         <div className="overflow-hidden aspect-video">
           <AnimatedImage

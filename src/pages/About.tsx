@@ -6,7 +6,10 @@ import { motion } from 'framer-motion';
 import { verticalFloat, slideFromLeft, slideFromRight, scrollFromBottom } from '../utils/customAnimations';
 import CtaSection from '../components/ui/CTASection';
 
+import { useTheme } from '../context/ThemeContext';
+
 export default function About() {
+  const { theme } = useTheme();
   const team = [
     {
       name: 'Harsha Tej',
@@ -146,7 +149,10 @@ export default function About() {
               </p>
             </ScrollReveal>
             <ScrollReveal>
-              <div className="relative aspect-square bg-[#3551B4] dark:bg-[#0f3433] rounded-2xl flex items-center justify-center border border-transparent dark:border-white/10 overflow-hidden">
+              <div
+                className="relative aspect-square rounded-2xl flex items-center justify-center border border-transparent dark:border-white/10 overflow-hidden"
+                style={{ backgroundColor: theme === 'dark' ? '#0f3433' : '#3551B4' }}
+              >
                 <img
                   src="/assets/About_logo.avif"
                   alt="BlueDot Logo"
@@ -218,7 +224,8 @@ export default function About() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all border border-card"
+                className="rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all border border-card"
+                style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
               >
                 <div className="mb-4 flex justify-center">
                   <img src={card.image} alt={card.title} className="h-16 w-auto object-contain" />
@@ -246,7 +253,10 @@ export default function About() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center bg-card backdrop-blur-md border border-card p-8 rounded-2xl shadow-xl">
+          <div
+            className="grid md:grid-cols-2 gap-12 items-center backdrop-blur-md border border-card p-8 rounded-2xl shadow-xl"
+            style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+          >
             <motion.div
               variants={slideFromLeft}
               initial="hidden"
@@ -298,7 +308,8 @@ export default function About() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-card backdrop-blur-md border border-card rounded-xl flex items-center shadow-lg hover:shadow-xl transition-all overflow-hidden h-32"
+                className="backdrop-blur-md border border-card rounded-xl flex items-center shadow-lg hover:shadow-xl transition-all overflow-hidden h-32"
+                style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
               >
                 <img
                   src={member.image}

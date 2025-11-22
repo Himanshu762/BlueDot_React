@@ -15,7 +15,10 @@ declare global {
   }
 }
 
+import { useTheme } from '../context/ThemeContext';
+
 export default function Contact() {
+  const { theme } = useTheme();
   const faqs = [
     {
       question: 'How can I volunteer with BlueDot?',
@@ -152,7 +155,10 @@ export default function Contact() {
             {/* Right Column: Tally Form Embed */}
             <div className="sticky top-24">
               <ScrollReveal>
-                <div className="bg-card backdrop-blur-md border border-card rounded-2xl p-2 shadow-2xl min-h-[530px]">
+                <div
+                  className="backdrop-blur-md border border-card rounded-2xl p-2 shadow-2xl min-h-[530px]"
+                  style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+                >
                   <iframe
                     data-tally-src="https://tally.so/embed/mRQL7p?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                     loading="lazy"
@@ -174,7 +180,10 @@ export default function Contact() {
       {/* FAQ Section */}
       <section className="py-20 bg-transparent relative z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-card backdrop-blur-md border border-card rounded-3xl p-8 md:p-12 shadow-xl">
+          <div
+            className="backdrop-blur-md border border-card rounded-3xl p-8 md:p-12 shadow-xl"
+            style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+          >
             <div className="text-center mb-12">
               <motion.span
                 initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}

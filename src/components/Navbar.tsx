@@ -50,7 +50,10 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-4">
-            <div className="flex items-center gap-1 px-3 py-2 rounded-full bg-white/40 dark:bg-dark-card/40 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-sm transition-colors duration-300">
+            <div
+              className="flex items-center gap-1 px-3 py-2 rounded-full backdrop-blur-md border border-white/20 dark:border-white/10 shadow-sm transition-colors duration-300"
+              style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.6)' }}
+            >
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -97,7 +100,8 @@ export default function Navbar() {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="relative z-50 cursor-pointer p-2 rounded-full bg-white/40 dark:bg-dark-card/40 backdrop-blur-md border border-white/20 dark:border-white/10 text-forest dark:text-dark-text-primary hover:scale-110 transition-all duration-200"
+              className="relative z-50 cursor-pointer p-2 rounded-full backdrop-blur-md border border-white/20 dark:border-white/10 text-forest dark:text-dark-text-primary hover:scale-110 transition-all duration-200"
+              style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.6)' }}
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? (
@@ -112,11 +116,11 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
             <button
               onClick={toggleTheme}
-              className="relative z-50 cursor-pointer p-2 rounded-full bg-white/40 dark:bg-dark-card/40 backdrop-blur-md border border-white/20 dark:border-white/10 text-forest dark:text-dark-text-primary"
+              className="relative z-50 cursor-pointer p-2 rounded-full backdrop-blur-md border border-white/20 dark:border-white/10 text-forest dark:text-dark-text-primary"
+              style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.6)' }}
             >
               {theme === 'dark' ? (
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -130,7 +134,8 @@ export default function Navbar() {
             </button>
             <motion.button
               onClick={toggleMobileMenu}
-              className="text-forest dark:text-dark-text-primary hover:text-golden-600 focus:outline-none p-2 rounded-lg bg-white/40 dark:bg-dark-card/40 backdrop-blur-md border border-white/20 dark:border-white/10"
+              className="text-forest dark:text-dark-text-primary hover:text-golden-600 focus:outline-none p-2 rounded-lg backdrop-blur-md border border-white/20 dark:border-white/10"
+              style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.6)' }}
               aria-label="Toggle menu"
               whileTap={{ scale: 0.95 }}
             >
@@ -162,7 +167,10 @@ export default function Navbar() {
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
               className="md:hidden pb-4 pt-2 overflow-hidden"
             >
-              <div className="flex flex-col space-y-2 p-3 bg-white/40 dark:bg-dark-card/40 backdrop-blur-md rounded-2xl border border-white/20 dark:border-white/10 mt-2">
+              <div
+                className="flex flex-col space-y-2 p-3 backdrop-blur-md rounded-2xl border border-white/20 dark:border-white/10 mt-2"
+                style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+              >
                 {navLinks.map((link, index) => (
                   <motion.div
                     key={link.path}

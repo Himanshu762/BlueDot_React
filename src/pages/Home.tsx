@@ -23,6 +23,7 @@ function ProjectCard({ title, description, image, date, category, link }: {
   category: string;
   link: string;
 }) {
+  const { theme } = useTheme();
   return (
     <Link to={link} className="group block relative">
       <motion.div
@@ -32,7 +33,8 @@ function ProjectCard({ title, description, image, date, category, link }: {
         variants={imageZoomOutReveal}
         whileHover="hover"
         animate="rest"
-        className="bg-card backdrop-blur-md border border-card rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+        className="backdrop-blur-md border border-card rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+        style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
       >
         <div className="overflow-hidden aspect-[4/3] relative">
           <AnimatedImage
@@ -177,6 +179,8 @@ export default function Home() {
     { name: 'Partner 9', logo: '/assets/partner_9.avif' },
     { name: 'Partner 10', logo: '/assets/partner_10.avif' },
     { name: 'Partner 11', logo: '/assets/partner_11.png' },
+    { name: 'Partner 12', logo: '/assets/partner_12.png' },
+    { name: 'Partner 13', logo: '/assets/partner_13.png' }
   ];
 
   return (
@@ -312,7 +316,7 @@ export default function Home() {
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-w-[80%] max-h-[80%] object-contain"
+                  className="max-w-[80%] max-h-[80%] object-contain rounded-lg"
                 />
               </div>
             ))}

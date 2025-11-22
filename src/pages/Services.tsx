@@ -4,8 +4,10 @@ import Footer from '../components/Footer';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import AnimatedImage from '../components/ui/AnimatedImage';
 import CtaSection from '../components/ui/CTASection';
+import { useTheme } from '../context/ThemeContext';
 
 export default function Services() {
+  const { theme } = useTheme();
   const services = [
     {
       id: 'lake-conservation',
@@ -61,7 +63,8 @@ export default function Services() {
               <ScrollReveal key={service.id} variant="slideUp" delay={index * 0.1}>
                 <Link to={service.link} className="group">
                   <div
-                    className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-card backdrop-blur-md border border-card rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all`}
+                    className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center backdrop-blur-md border border-card rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all`}
+                    style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
                   >
                     <div className={` ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                       <div className="rounded-xl overflow-hidden shadow-lg">
