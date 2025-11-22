@@ -25,7 +25,7 @@ export default function NativeAfforestation() {
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
                   Native Afforestation
                 </h1>
-                <p className="text-xl md:text-2xl text-forest-light dark:text-[#F3EBC0] leading-relaxed">
+                <p className="text-xl md:text-2xl text-forest-light leading-relaxed">
                   Restoring ecosystems with native species that co-evolved with the land.
                 </p>
               </ScrollReveal>
@@ -54,7 +54,7 @@ export default function NativeAfforestation() {
               <h2 className="text-3xl md:text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
                 The Problem
               </h2>
-              <p className="text-lg md:text-xl text-forest-light dark:text-[#F3EBC0] leading-relaxed">
+              <p className="text-lg md:text-xl text-forest-light leading-relaxed">
                 Rapid urbanization and deforestation have degraded ecosystems, reduced biodiversity, and increased vulnerability to climate change. Exotic or fast-growing plantation drives often fail long-term, as they don't support local fauna or restore ecological balance.
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function NativeAfforestation() {
               <h2 className="text-3xl md:text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
                 Our Solution
               </h2>
-              <p className="text-lg md:text-xl text-forest-light dark:text-[#F3EBC0] leading-relaxed">
+              <p className="text-lg md:text-xl text-forest-light leading-relaxed">
                 BlueDot plants only <strong className="text-forest dark:text-[#F5F0E1] font-bold">native species</strong> — trees that co-evolved with local ecosystems and communities. These trees support pollinators, birds, and soil health, while being resilient to local climates and requiring minimal maintenance.
               </p>
             </div>
@@ -96,7 +96,7 @@ export default function NativeAfforestation() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-white/40 dark:bg-[#0f3433]/50 backdrop-blur-sm border border-white/20 dark:border-white/10 rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-3 h-3 bg-[#e8bb49] rounded-full mb-6"></div>
-                  <p className="text-lg text-forest dark:text-[#F3EBC0] leading-relaxed">
+                  <p className="text-lg text-forest leading-relaxed">
                     {item}
                   </p>
                 </div>
@@ -124,7 +124,7 @@ export default function NativeAfforestation() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="flex items-start bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl p-6 shadow-md h-full">
                   <div className="flex-shrink-0 w-2 h-2 bg-[#3c4faf] rounded-full mt-2.5 mr-4"></div>
-                  <p className="text-lg text-forest-light dark:text-[#F3EBC0]">
+                  <p className="text-lg text-forest-light">
                     {item}
                   </p>
                 </div>
@@ -141,7 +141,7 @@ export default function NativeAfforestation() {
             <h2 className="text-3xl md:text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
               Our Difference
             </h2>
-            <p className="text-xl text-forest-light dark:text-[#F3EBC0] leading-relaxed">
+            <p className="text-xl text-forest-light leading-relaxed">
               Unlike monoculture plantations, our approach emphasises <strong className="text-forest dark:text-[#F5F0E1] font-bold">ecological integrity</strong>. Each project is designed for long-term survival, involving communities in care and stewardship, ensuring these forests thrive for generations.
             </p>
           </ScrollReveal>

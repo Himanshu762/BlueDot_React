@@ -25,7 +25,7 @@ export default function WildlifeConservation() {
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
                   Wildlife Conservation
                 </h1>
-                <p className="text-xl md:text-2xl text-forest-light dark:text-[#F3EBC0] leading-relaxed">
+                <p className="text-xl md:text-2xl text-forest-light leading-relaxed">
                   Bridging people, nature, and conservation through education.
                 </p>
               </ScrollReveal>
@@ -54,7 +54,7 @@ export default function WildlifeConservation() {
               <h2 className="text-3xl md:text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
                 The Problem
               </h2>
-              <p className="text-lg md:text-xl text-forest-light dark:text-[#F3EBC0] leading-relaxed">
+              <p className="text-lg md:text-xl text-forest-light leading-relaxed">
                 In many rural and semi-urban communities, there's limited access to wildlife education. This leads to misinformation, fear of local fauna, and a growing disconnect from nature — worsening human-animal conflicts and reducing conservation awareness.
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function WildlifeConservation() {
               <h2 className="text-3xl md:text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
                 Our Solution
               </h2>
-              <p className="text-lg md:text-xl text-forest-light dark:text-[#F3EBC0] leading-relaxed">
+              <p className="text-lg md:text-xl text-forest-light leading-relaxed">
                 <strong className="text-forest dark:text-[#F5F0E1] font-bold">Eco Savaari</strong> is a first-of-its-kind mobile outreach initiative. A specially equipped van travels to schools, villages, and forest-edge settlements, turning open spaces into learning hubs. Through games, storytelling, visual aids, and interactive sessions, it makes wildlife and conservation education accessible, engaging, and rooted in local culture.
               </p>
             </div>
@@ -96,7 +96,7 @@ export default function WildlifeConservation() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-white/40 dark:bg-[#0f3433]/50 backdrop-blur-sm border border-white/20 dark:border-white/10 rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-3 h-3 bg-[#e8bb49] rounded-full mb-6"></div>
-                  <p className="text-lg text-forest dark:text-[#F3EBC0] leading-relaxed">
+                  <p className="text-lg text-forest leading-relaxed">
                     {item}
                   </p>
                 </div>
@@ -124,7 +124,7 @@ export default function WildlifeConservation() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="flex items-start bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl p-6 shadow-md h-full">
                   <div className="flex-shrink-0 w-2 h-2 bg-[#3c4faf] rounded-full mt-2.5 mr-4"></div>
-                  <p className="text-lg text-forest-light dark:text-[#F3EBC0]">
+                  <p className="text-lg text-forest-light">
                     {item}
                   </p>
                 </div>
@@ -141,7 +141,7 @@ export default function WildlifeConservation() {
             <h2 className="text-3xl md:text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
               Our Difference
             </h2>
-            <p className="text-xl text-forest-light dark:text-[#F3EBC0] leading-relaxed">
+            <p className="text-xl text-forest-light leading-relaxed">
               Unlike static awareness programs, Eco Savaari brings conservation to people's doorsteps. Its mobile, interactive model ensures both inclusivity and deeper behavioural change, planting the seeds of stewardship where it's needed most.
             </p>
           </ScrollReveal>

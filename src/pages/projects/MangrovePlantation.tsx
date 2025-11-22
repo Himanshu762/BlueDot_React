@@ -17,7 +17,7 @@ export default function MangrovePlantation() {
               <span className="text-sm font-semibold text-[#e8bb49]">
                 Native Afforestation
               </span>
-              <span className="text-sm text-forest-light dark:text-[#F3EBC0]">
+              <span className="text-sm text-forest-light">
                 May 4, 2025
               </span>
             </div>
@@ -32,7 +32,7 @@ export default function MangrovePlantation() {
       <section className="py-20 bg-background dark:bg-[#0C142B] transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-forest dark:text-[#F3EBC0] leading-relaxed mb-12">
+            <p className="text-xl text-forest leading-relaxed mb-12">
               We've launched an ongoing mangrove restoration initiative in Chennai, Tamil Nadu. This project is part of our broader mission to reintroduce native biodiversity and build ecological resilience within urban landscapes. Recognizing the area's potential for ecological revival, we have begun restoring parts of its degraded periphery by planting 1,000 saplings of three native mangrove species: Rhizophora mucronata, known for its soil-stabilizing stilt roots; Excoecaria agallocha, a fast-growing species that adapts well to brackish urban soils; and Avicennia marina, a hardy pioneer species with aerial roots that improve water quality and support diverse wildlife These efforts aim to reduce urban flood risk, improve water retention, create green microhabitats for birds and aquatic life, and foster greater public involvement and care for urban ecosystems.
             </p>
           </div>

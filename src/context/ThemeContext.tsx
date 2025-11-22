@@ -32,6 +32,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         const root = window.document.documentElement;
         console.log('Theme Effect Running. Current theme:', theme);
 
+        // Clean up any inline styles from previous debugging attempts
+        document.body.style.removeProperty('background-color');
+        document.body.style.removeProperty('color');
+
         if (theme === 'dark') {
             root.classList.add('dark');
             root.style.colorScheme = 'dark';

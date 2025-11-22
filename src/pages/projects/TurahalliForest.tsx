@@ -17,7 +17,7 @@ export default function TurahalliForest() {
               <span className="text-sm font-semibold text-[#e8bb49]">
                 Cleanup Drives
               </span>
-              <span className="text-sm text-forest-light dark:text-[#F3EBC0]">
+              <span className="text-sm text-forest-light">
                 Jun 14, 2025
               </span>
             </div>
@@ -32,7 +32,7 @@ export default function TurahalliForest() {
       <section className="py-20 bg-background dark:bg-[#0C142B] transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-forest dark:text-[#F3EBC0] leading-relaxed mb-12">
+            <p className="text-xl text-forest leading-relaxed mb-12">
               As part of our continued commitment to on-ground environmental action, we recently led a cleanup initiative at Turahalli Forest — one of Bengaluru's last remaining natural forest patches. In collaboration with our dedicated interns and the spirited student community of IIM Bangalore, we came together to restore this ecologically important space. Armed with gloves, reusable bags, and a shared purpose, volunteers navigated the forest trails, collecting waste ranging from plastic bottles and wrappers to broken glass and packaging materials. Over 200 kilograms of waste were removed in a single day — a clear reflection of the human footprint on even our most treasured green spaces. Beyond the immediate impact, this initiative served as a powerful reminder of the role community-led efforts play in protecting local ecosystems. It was more than a cleanup — it was a collective act of awareness, responsibility, and reclaiming. Through efforts like these, we aim to inspire everyday action and restore the integrity of natural spaces like Turahalli.
             </p>
           </div>

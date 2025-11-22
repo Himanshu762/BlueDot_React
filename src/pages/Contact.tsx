@@ -113,7 +113,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.1 }}
-                className="text-5xl md:text-6xl font-bold text-forest dark:text-[#F5F0E1] mb-10"
+                className="text-5xl md:text-6xl font-bold text-forest mb-10"
               >
                 Join the Movement
               </motion.h1>
@@ -122,7 +122,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.2 }}
-                className="text-lg text-forest-light dark:text-[#F3EBC0] mb-12 leading-relaxed"
+                className="text-lg text-forest-light mb-12 leading-relaxed"
               >
                 We're glad you're here. Whether you're an individual looking to volunteer, a student eager to intern, or a partner exploring collaboration — we're here to connect. Share your interest and let's build meaningful impact together. Fill in your details and let's get started.
               </motion.p>
@@ -131,7 +131,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.3 }}
-                className="text-md text-forest-light dark:text-[#F3EBC0] mb-6"
+                className="text-md text-forest-light mb-6"
               >
                 Not sure where you fit?
               </motion.p>
@@ -152,7 +152,7 @@ export default function Contact() {
             {/* Right Column: Tally Form Embed */}
             <div className="sticky top-24">
               <ScrollReveal>
-                <div className="bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl p-2 shadow-2xl min-h-[530px]">
+                <div className="bg-card backdrop-blur-md border border-card rounded-2xl p-2 shadow-2xl min-h-[530px]">
                   <iframe
                     data-tally-src="https://tally.so/embed/mRQL7p?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                     loading="lazy"
@@ -174,7 +174,7 @@ export default function Contact() {
       {/* FAQ Section */}
       <section className="py-20 bg-transparent relative z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-xl">
+          <div className="bg-card backdrop-blur-md border border-card rounded-3xl p-8 md:p-12 shadow-xl">
             <div className="text-center mb-12">
               <motion.span
                 initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
@@ -190,7 +190,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.1 }}
-                className="text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-8"
+                className="text-4xl font-bold text-forest mb-8"
               >
                 Frequently asked questions
               </motion.h2>
@@ -199,7 +199,7 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.2 }}
-                className="text-lg text-forest-light dark:text-[#F3EBC0]"
+                className="text-lg text-forest-light"
               >
                 Here are the top questions our clients ask before getting started.
               </motion.p>

@@ -13,6 +13,8 @@ html {
   --bg-secondary: #FAF6ED;
   --text-primary: rgb(19, 38, 27);
   --text-secondary: rgb(94, 107, 100);
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --border-card: rgba(255, 255, 255, 0.6);
 }
 
 .dark {
@@ -21,6 +23,8 @@ html {
   /* Match primary in dark mode for seamless look, or use #0f3433 for contrast */
   --text-primary: #F5F0E1;
   --text-secondary: #F3EBC0;
+  --bg-card: rgba(15, 52, 51, 0.95);
+  --border-card: rgba(255, 255, 255, 0.1);
 }
 
 body {

@@ -78,13 +78,13 @@ export default function Navbar() {
                     <div className="flex flex-col transition-transform duration-300 group-hover:-translate-y-6">
                       <span className={`block h-6 flex items-center ${hoveredLink === link.path || location.pathname === link.path
                         ? 'text-white'
-                        : 'text-[#e8bb49] dark:text-dark-text-secondary'
+                        : 'text-[#e8bb49]'
                         }`}>
                         {link.label}
                       </span>
                       <span className={`block h-6 flex items-center ${hoveredLink === link.path || location.pathname === link.path
                         ? 'text-white'
-                        : 'text-[#e8bb49] dark:text-dark-text-secondary'
+                        : 'text-[#e8bb49]'
                         }`}>
                         {link.label}
                       </span>
@@ -176,7 +176,7 @@ export default function Navbar() {
                         block px-4 py-3 rounded-xl font-medium transition-all
                         ${location.pathname === link.path
                           ? 'bg-gradient-to-r from-golden-400 to-golden-500 text-white shadow-md'
-                          : 'text-forest dark:text-dark-text-primary hover:bg-white/60 dark:hover:bg-white/10'
+                          : 'text-[#e8bb49] hover:bg-white/60 dark:hover:bg-white/10'
                         }
                       `}
                       onClick={closeMobileMenu}

@@ -3,7 +3,7 @@ import RollingText from './ui/RollingText'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#3551B4] dark:bg-[#0C142B] text-white transition-colors duration-300 border-t border-transparent dark:border-white/10">
+    <footer className="bg-[#3551B4] text-white transition-colors duration-300 border-t border-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* About Section */}

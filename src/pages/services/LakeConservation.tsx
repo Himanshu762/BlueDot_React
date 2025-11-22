@@ -25,7 +25,7 @@ export default function LakeConservation() {
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
                   Lake Conservation
                 </h1>
-                <p className="text-xl md:text-2xl text-forest-light dark:text-[#F3EBC0] leading-relaxed">
+                <p className="text-xl md:text-2xl text-forest-light leading-relaxed">
                   Reviving India's Blue Ecosystems through community-led restoration.
                 </p>
               </ScrollReveal>
@@ -54,7 +54,7 @@ export default function LakeConservation() {
               <h2 className="text-3xl md:text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
                 The Problem
               </h2>
-              <p className="text-lg md:text-xl text-forest-light dark:text-[#F3EBC0] leading-relaxed">
+              <p className="text-lg md:text-xl text-forest-light leading-relaxed">
                 India's lakes are choking with silt, shrinking water storage and threatening both ecosystems and farmer livelihoods. Without intervention, these vital water bodies face irreversible degradation, impacting biodiversity and groundwater levels.
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function LakeConservation() {
               <h2 className="text-3xl md:text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
                 Our Solution
               </h2>
-              <p className="text-lg md:text-xl text-forest-light dark:text-[#F3EBC0] leading-relaxed">
+              <p className="text-lg md:text-xl text-forest-light leading-relaxed">
                 We restore lakes by excavating nutrient-rich silt and giving it free to farmers. This doubles the impact: lakes hold millions of extra litres of water, while farmers improve soil fertility and increase crop yields without chemical fertilizers.
               </p>
             </div>
@@ -96,7 +96,7 @@ export default function LakeConservation() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-white/40 dark:bg-[#0f3433]/50 backdrop-blur-sm border border-white/20 dark:border-white/10 rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-3 h-3 bg-[#e8bb49] rounded-full mb-6"></div>
-                  <p className="text-lg text-forest dark:text-[#F3EBC0] leading-relaxed">
+                  <p className="text-lg text-forest leading-relaxed">
                     {item}
                   </p>
                 </div>
@@ -125,7 +125,7 @@ export default function LakeConservation() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="flex items-start bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl p-6 shadow-md">
                   <div className="flex-shrink-0 w-2 h-2 bg-[#3c4faf] rounded-full mt-2.5 mr-4"></div>
-                  <p className="text-lg text-forest-light dark:text-[#F3EBC0]">
+                  <p className="text-lg text-forest-light">
                     {item}
                   </p>
                 </div>
@@ -142,7 +142,7 @@ export default function LakeConservation() {
             <h2 className="text-3xl md:text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
               Our Difference
             </h2>
-            <p className="text-xl text-forest-light dark:text-[#F3EBC0] leading-relaxed">
+            <p className="text-xl text-forest-light leading-relaxed">
               Unlike traditional approaches, BlueDot directly links lake revival to farmer benefits. This unique model ties ecology to livelihoods, creating long-term stewardship and community ownership.
             </p>
           </ScrollReveal>

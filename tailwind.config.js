@@ -20,6 +20,20 @@ export default {
           light: 'var(--bg-secondary)',
           dark: '#EDE4CB',
         },
+        // Custom Dark Mode Colors
+        dark: {
+          bg: '#0C142B',
+          card: 'var(--bg-card)', // Mapped to CSS variable
+          text: {
+            primary: '#F5F0E1',
+            secondary: '#F3EBC0',
+            tertiary: '#F3EBD4',
+            highlight: '#F5EBBC',
+          }
+        },
+        // Semantic Colors
+        card: 'var(--bg-card)',
+        border: 'var(--border-card)',
         // ... (keeping other colors)
         forest: {
           DEFAULT: 'var(--text-primary)',
