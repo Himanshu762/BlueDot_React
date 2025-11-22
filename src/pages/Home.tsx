@@ -307,7 +307,7 @@ export default function Home() {
               <div
                 key={index}
                 className="w-48 h-28 flex items-center justify-center p-2 backdrop-blur-sm border border-card rounded-xl transition-all duration-300"
-                style={{ backgroundColor: theme === 'dark' ? '#0f3433' : 'rgba(255, 255, 255, 0.95)' }}
+                style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
               >
                 <img
                   src={partner.logo}

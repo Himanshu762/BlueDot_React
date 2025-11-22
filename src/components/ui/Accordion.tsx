@@ -61,7 +61,7 @@ export default function Accordion({ items, className = '' }: AccordionProps) {
           className="backdrop-blur-md border border-card rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
           style={{
             willChange: 'auto',
-            backgroundColor: theme === 'dark' ? '#0f3433' : 'rgba(255, 255, 255, 0.95)'
+            backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)'
           }}
         >
           <button

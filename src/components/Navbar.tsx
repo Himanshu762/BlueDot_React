@@ -77,13 +77,13 @@ export default function Navbar() {
                   <div className="relative z-10 h-6 overflow-hidden">
                     <div className="flex flex-col transition-transform duration-300 group-hover:-translate-y-6">
                       <span className={`block h-6 flex items-center ${hoveredLink === link.path || location.pathname === link.path
-                        ? 'text-white'
+                        ? 'text-[#e8bb49]'
                         : 'text-[#e8bb49]'
                         }`}>
                         {link.label}
                       </span>
                       <span className={`block h-6 flex items-center ${hoveredLink === link.path || location.pathname === link.path
-                        ? 'text-white'
+                        ? 'text-[#e8bb49]'
                         : 'text-[#e8bb49]'
                         }`}>
                         {link.label}
