@@ -1,73 +1,25 @@
-# React + TypeScript + Vite
+# BlueDot - Environmental Conservation Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![BlueDot Hero Section](screenshot/screenshot.png)
 
-Currently, two official plugins are available:
+## About The Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This website serves as the comprehensive digital platform for **BlueDot**, an NGO dedicated to environmental conservation and sustainability. It is designed to engage the community, showcase impactful initiatives, and provide easy access to the organization's services.
 
-## React Compiler
+### Key Features & Functions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Project Showcase**: A dynamic portfolio displaying ongoing and completed conservation projects like *EcoSavaari*, *Laksha Vruksha*, and *Mangrove Plantations*. Each project page provides detailed insights into the initiative's goals and impact.
+*   **Service Portfolio**: Dedicated sections for the various services offered by BlueDot, such as *Lake Conservation*, *Native Afforestation*, and *Wildlife Conservation*, allowing users to understand how they can contribute or benefit.
+*   **Interactive Navigation**: Seamless routing and navigation powered by React Router, ensuring a smooth user experience across different sections of the site.
+*   **Responsive Design**: A fully responsive layout built with Tailwind CSS, ensuring accessibility and optimal viewing on all devices, from desktops to mobile phones.
+*   **Contact Integration**: Easy-to-use contact forms and floating action buttons to facilitate direct communication with the NGO for volunteering or inquiries.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project is built using modern web technologies to ensure a fast, responsive, and engaging user experience:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*   **Framework**: [React](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/)
+*   **Build Tool**: [Vite](https://vitejs.dev/)
+*   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+*   **Animations**: [Framer Motion](https://www.framer.com/motion/)
+*   **Routing**: [React Router](https://reactrouter.com/)
