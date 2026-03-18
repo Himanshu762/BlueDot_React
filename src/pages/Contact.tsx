@@ -125,9 +125,18 @@ export default function Contact() {
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.2 }}
-                className="text-lg text-forest-light mb-12 leading-relaxed"
+                className="text-lg text-forest-light mb-6 leading-relaxed"
               >
                 We're glad you're here. Whether you're an individual looking to volunteer, a student eager to intern, or a partner exploring collaboration — we're here to connect. Share your interest and let's build meaningful impact together. Fill in your details and let's get started.
+              </motion.p>
+              <motion.p
+                initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
+                whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.25 }}
+                className="text-sm text-forest-light/70 mb-12"
+              >
+                Legal Entity: One Blu Foundation
               </motion.p>
               <motion.p
                 initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
