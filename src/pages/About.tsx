@@ -147,6 +147,9 @@ export default function About() {
               <p className="text-lg text-forest leading-relaxed">
                 BlueDot is a Bangalore-based non-profit organization dedicated to healing Earth's blue ecosystems — rivers, lakes, oceans, and wetlands while protecting the rich wildlife that depends on them. Born out of a deep concern for the accelerating impacts of climate change, we are a collective of environmentalists, scientists, educators, and everyday citizens driven by one goal: to restore what nature gave us and ensure it thrives for generations to come.
               </p>
+              <p className="text-sm text-forest-light mt-4">
+                Legal Entity: One Blu Foundation
+              </p>
             </ScrollReveal>
             <ScrollReveal>
               <div

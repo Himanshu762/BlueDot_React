@@ -90,9 +90,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-white/70 text-sm text-center md:text-left">
-              &copy; {new Date().getFullYear()} BlueDot Foundation. All rights reserved.
-            </p>
+            <div className="text-white/70 text-sm text-center md:text-left">
+              <p>&copy; {new Date().getFullYear()} BlueDot Foundation. All rights reserved.</p>
+              <p className="mt-1">Legal Entity: One Blu Foundation</p>
+            </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/contact" className="text-white/70 hover:text-[rgb(238,185,42)] text-sm transition">
                 Privacy Policy
