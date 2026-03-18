@@ -41,7 +41,7 @@ export default function Navbar() {
           >
             <Link to="/" className="flex items-center" onClick={closeMobileMenu}>
               <img
-                src="/assets/Logo.avif"
+                src="/assets/Logo.png"
                 alt="BlueDot Logo"
                 className="h-12 w-auto transition-all duration-300"
               />
