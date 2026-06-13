@@ -25,69 +25,15 @@ export default function About() {
       isFounder: false
     },
     {
-      name: 'Swetha',
+      name: 'Vishlesh S P',
       role: 'Core Team',
-      image: '/assets/About_swetha.avif',
-      isFounder: false
-    },
-    {
-      name: 'Shreya Asrani',
-      role: 'Core Team',
-      image: '/assets/About_shreya.avif',
-      isFounder: false
-    },
-    {
-      name: 'Mohith Rajshekar',
-      role: 'Core Team',
-      image: '/assets/About_mohith.avif',
-      isFounder: false
-    },
-    {
-      name: 'Himanshu Venugopal',
-      role: 'Core Team',
-      image: '/assets/About_Himanshu.avif',
-      isFounder: false
-    },
-    {
-      name: 'Rahul Jauhari',
-      role: 'Core Team',
-      image: '/assets/About_rahul_j.avif',
-      isFounder: false
-    },
-    {
-      name: 'Deepika Appaiah',
-      role: 'Core Team',
-      image: '/assets/About_deepika.avif',
-      isFounder: false
-    },
-    {
-      name: 'Gubbi',
-      role: 'Core Team',
-      image: '/assets/About_gubbi.avif',
-      isFounder: false
-    },
-    {
-      name: 'Rahul Aradhya',
-      role: 'Core Team',
-      image: '/assets/About_rahul_a.avif',
-      isFounder: false
-    },
-    {
-      name: 'Renuka Kulkarni',
-      role: 'Core Team',
-      image: '/assets/About_renuka.avif',
+      image: '/assets/About_vishlesh.png',
       isFounder: false
     },
     {
       name: 'Chetan S Murthy',
       role: 'Core Team',
       image: '/assets/About_cheta.avif',
-      isFounder: false
-    },
-    {
-      name: 'Chaitali Raizada',
-      role: 'Core Team',
-      image: '/assets/About_chaitali.avif',
       isFounder: false
     },
     {
@@ -103,9 +49,69 @@ export default function About() {
       isFounder: false
     },
     {
-      name: 'Divya Reddy',
+      name: 'Shreya Asrani',
       role: 'Core Team',
-      image: '/assets/About_divya.avif',
+      image: '/assets/About_shreya.avif',
+      isFounder: false
+    },
+    {
+      name: 'Deepika Appaiah',
+      role: 'Core Team',
+      image: '/assets/About_deepika.avif',
+      isFounder: false
+    },
+    {
+      name: 'Rahul Aradhya',
+      role: 'Core Team',
+      image: '/assets/About_rahul_a.avif',
+      isFounder: false
+    },
+    {
+      name: 'Himanshu Venugopal',
+      role: 'Core Team',
+      image: '/assets/About_Himanshu.avif',
+      isFounder: false
+    },
+    {
+      name: 'Renuka Kulkarni',
+      role: 'Core Team',
+      image: '/assets/About_renuka.avif',
+      isFounder: false
+    },
+    {
+      name: 'Hitesh R J',
+      role: 'Core Team',
+      image: '/assets/About_hitesh.png',
+      isFounder: false
+    },
+    {
+      name: 'Samarth S S',
+      role: 'Core Team',
+      image: '/assets/About_samarth.png',
+      isFounder: false
+    },
+    {
+      name: 'Shahjahan R H',
+      role: 'Core Team',
+      image: '/assets/About_shahjahan.png',
+      isFounder: false
+    },
+    {
+      name: 'Sachin C S',
+      role: 'Core Team',
+      image: '/assets/Abotu_sachin.png',
+      isFounder: false
+    },
+    {
+      name: 'Sruthi G',
+      role: 'Core Team',
+      image: '/assets/About_sruthi.png',
+      isFounder: false
+    },
+    {
+      name: 'Babu Chandra',
+      role: 'Core Team',
+      image: '/assets/About_babu.png',
       isFounder: false
     }
   ];
@@ -296,13 +302,13 @@ export default function About() {
 
       {/* Core Team Section */}
       <section className="py-20 transition-colors duration-300">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <h2 className="text-5xl font-bold text-forest mb-16 text-center">
-              Our Core Team
+            <h2 className="text-5xl font-bold text-[#e8bb49] mb-16 text-center">
+              Our Core-team
             </h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="flex flex-wrap justify-center gap-6">
             {coreTeam.map((member, index) => (
               <motion.div
                 key={index}
@@ -311,21 +317,17 @@ export default function About() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: index * 0.05 }}
-                className="backdrop-blur-md border border-card rounded-xl flex items-center shadow-lg hover:shadow-xl transition-all overflow-hidden h-32"
-                style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+                className="bg-[#f3ecd9] border-[3px] border-[#e8bb49] rounded-[2rem] overflow-hidden flex flex-col items-center shadow-lg w-44"
               >
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-32 h-full object-cover"
+                  className="w-full aspect-square object-cover"
                 />
-                <div className="p-4">
-                  <h4 className="font-bold text-forest text-lg">
+                <div className="py-3 px-2 w-full text-center">
+                  <h4 className="font-bold text-[#3551B4] text-sm">
                     {member.name}
                   </h4>
-                  <p className="text-sm text-forest-light font-medium">
-                    {member.role}
-                  </p>
                 </div>
               </motion.div>
             ))}
