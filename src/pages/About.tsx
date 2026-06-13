@@ -91,12 +91,6 @@ export default function About() {
       isFounder: false
     },
     {
-      name: 'Shahjahan R H',
-      role: 'Core Team',
-      image: '/assets/About_shahjahan.png',
-      isFounder: false
-    },
-    {
       name: 'Sachin C S',
       role: 'Core Team',
       image: '/assets/Abotu_sachin.png',
@@ -302,13 +296,13 @@ export default function About() {
 
       {/* Core Team Section */}
       <section className="py-20 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <h2 className="text-5xl font-bold text-[#e8bb49] mb-16 text-center">
-              Our Core-team
+            <h2 className="text-5xl font-bold text-forest mb-16 text-center">
+              Our Core Team
             </h2>
           </ScrollReveal>
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {coreTeam.map((member, index) => (
               <motion.div
                 key={index}
@@ -317,17 +311,21 @@ export default function About() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-[#f3ecd9] border-[3px] border-[#e8bb49] rounded-[2rem] overflow-hidden flex flex-col items-center shadow-lg w-44"
+                className="backdrop-blur-md border border-card rounded-xl flex items-center shadow-lg hover:shadow-xl transition-all overflow-hidden h-32"
+                style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
               >
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full aspect-square object-cover"
+                  className="w-32 h-full object-cover"
                 />
-                <div className="py-3 px-2 w-full text-center">
-                  <h4 className="font-bold text-[#3551B4] text-sm">
+                <div className="p-4">
+                  <h4 className="font-bold text-forest text-lg">
                     {member.name}
                   </h4>
+                  <p className="text-sm text-forest-light font-medium">
+                    {member.role}
+                  </p>
                 </div>
               </motion.div>
             ))}
