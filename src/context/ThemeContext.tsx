@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 type Theme = 'light' | 'dark';
@@ -30,7 +31,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     useEffect(() => {
         const root = window.document.documentElement;
-        console.log('Theme Effect Running. Current theme:', theme);
 
         // Clean up any inline styles from previous debugging attempts
         document.body.style.removeProperty('background-color');
@@ -48,7 +48,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     }, [theme]);
 
     const toggleTheme = () => {
-        console.log('toggleTheme called. Current:', theme);
         setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
     };
 

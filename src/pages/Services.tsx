@@ -4,10 +4,9 @@ import Footer from '../components/Footer';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import AnimatedImage from '../components/ui/AnimatedImage';
 import CtaSection from '../components/ui/CTASection';
-import { useTheme } from '../context/ThemeContext';
+
 
 export default function Services() {
-  const { theme } = useTheme();
   const services = [
     {
       id: 'lake-conservation',
@@ -41,7 +40,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="text-center max-w-4xl mx-auto">
             <ScrollReveal>
-              <span className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold mb-8">
+              <span className="inline-block px-6 py-2 bg-[#3551B4]/10 dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold uppercase tracking-wide mb-8">
                 Services
               </span>
               <h1 className="text-5xl md:text-6xl font-bold text-forest mb-10">
@@ -63,8 +62,7 @@ export default function Services() {
               <ScrollReveal key={service.id} variant="slideUp" delay={index * 0.1}>
                 <Link to={service.link} className="group">
                   <div
-                    className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center backdrop-blur-md border border-card rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all`}
-                    style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center backdrop-blur-md border border-card rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all bg-white/95 dark:bg-[#0f3433]/70"
                   >
                     <div className={` ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                       <div className="rounded-xl overflow-hidden shadow-lg">

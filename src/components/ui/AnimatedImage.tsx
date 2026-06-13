@@ -53,7 +53,7 @@ export default function AnimatedImage({
     >
       {/* Blur placeholder */}
       {!isLoaded && (
-        <div className="absolute inset-0 bg-[rgb(243,235,212)] animate-pulse" />
+        <div className="absolute inset-0 bg-background-light dark:bg-[#0f3433] animate-pulse" />
       )}
 
       {/* Actual image - only load when in view or priority */}

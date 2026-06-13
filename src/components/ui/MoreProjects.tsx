@@ -54,7 +54,7 @@ export default function MoreProjects({ currentProjectId }: MoreProjectsProps) {
     return (
         <section className="py-20 bg-transparent">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl font-bold text-[rgb(19,38,27)] mb-16 text-center">
+                <h2 className="text-3xl font-bold text-forest dark:text-[#F5F0E1] mb-16 text-center">
                     More to explore
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -66,7 +66,7 @@ export default function MoreProjects({ currentProjectId }: MoreProjectsProps) {
                                     transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                                     className="h-full flex flex-col"
                                 >
-                                    <div className="bg-white/30 backdrop-blur-md border border-white/20 overflow-hidden rounded-xl shadow-lg group-hover:shadow-xl transition-shadow aspect-video mb-4">
+                                    <div className="bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 overflow-hidden rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 aspect-video mb-4">
                                         <AnimatedImage
                                             src={project.image}
                                             alt={project.title}
@@ -83,9 +83,9 @@ export default function MoreProjects({ currentProjectId }: MoreProjectsProps) {
                                         >
                                             {project.category}
                                         </span>
-                                        <span className="text-xs text-[rgb(94,107,100)]">{project.date}</span>
+                                        <span className="text-xs text-forest-light">{project.date}</span>
                                     </div>
-                                    <h3 className="text-xl font-bold text-[rgb(19,38,27)] group-hover:text-[#3551B4] transition-colors">
+                                    <h3 className="text-xl font-bold text-forest dark:text-[#F5F0E1] group-hover:text-[#3551B4] dark:group-hover:text-[#e8bb49] transition-colors">
                                         {project.title}
                                     </h3>
                                 </motion.div>

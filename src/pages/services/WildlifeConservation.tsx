@@ -19,7 +19,7 @@ export default function WildlifeConservation() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <ScrollReveal>
-                <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
+                <span className="inline-block px-6 py-2 bg-[#3551B4] text-white dark:bg-[#3c4faf] dark:text-[#f5f0e1] rounded-full text-sm font-semibold uppercase tracking-wide mb-6 shadow-sm">
                   Service
                 </span>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
@@ -50,7 +50,7 @@ export default function WildlifeConservation() {
       <section className="py-20 bg-background-light dark:bg-[#0C142B] transition-colors duration-300 relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal variant="slideUp">
-            <div className="bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-xl">
+            <div className="bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-xl transition-all duration-300">
               <h2 className="text-3xl md:text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
                 The Problem
               </h2>
@@ -67,7 +67,7 @@ export default function WildlifeConservation() {
         <OrganicBlob color="leaf" position="center" size="xl" opacity={0.05} />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal variant="slideUp">
-            <div className="bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-xl">
+            <div className="bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-xl transition-all duration-300">
               <h2 className="text-3xl md:text-4xl font-bold text-forest dark:text-[#F5F0E1] mb-8">
                 Our Solution
               </h2>
@@ -94,9 +94,9 @@ export default function WildlifeConservation() {
               "Creates curiosity and dialogue among children and youth — the next stewards of nature."
             ].map((item, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-white/40 dark:bg-[#0f3433]/50 backdrop-blur-sm border border-white/20 dark:border-white/10 rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-shadow">
+                <div className="bg-white/40 dark:bg-[#0f3433]/50 backdrop-blur-sm border border-white/20 dark:border-white/10 rounded-2xl p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300">
                   <div className="w-3 h-3 bg-[#e8bb49] rounded-full mb-6"></div>
-                  <p className="text-lg text-forest leading-relaxed">
+                  <p className="text-lg text-forest dark:text-[#F5F0E1] leading-relaxed">
                     {item}
                   </p>
                 </div>
@@ -122,7 +122,7 @@ export default function WildlifeConservation() {
               "Teachers and parents note reduced fear and improved understanding of local ecosystems."
             ].map((item, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="flex items-start bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl p-6 shadow-md h-full">
+                <div className="flex items-start bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl p-6 shadow-md transition-all duration-300 h-full">
                   <div className="flex-shrink-0 w-2 h-2 bg-[#3c4faf] rounded-full mt-2.5 mr-4"></div>
                   <p className="text-lg text-forest-light">
                     {item}

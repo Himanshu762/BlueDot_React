@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Carousel from '../../components/ui/Carousel'
+import { categoryTextColor, getCategoryColor } from '../../utils/projectStyles'
 import AnimatedImage from '../../components/ui/AnimatedImage'
 import ScrollReveal, { StaggerContainer, StaggerItem } from '../../components/ui/ScrollReveal'
 import { buttonHover } from '../../utils/animations'
@@ -48,10 +49,16 @@ export default function EcoSavaari() {
             <StaggerContainer>
               <StaggerItem>
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="text-sm font-semibold text-[#e8bb49] uppercase tracking-wide">
+                  <span
+                    className="px-3 py-1.5 text-xs rounded-full font-semibold shadow-sm tracking-wide uppercase"
+                    style={{
+                      backgroundColor: getCategoryColor('Wildlife'),
+                      color: categoryTextColor
+                    }}
+                  >
                     Wildlife
                   </span>
-                  <span className="text-sm text-forest-light">
+                  <span className="text-sm text-forest-light dark:text-dark-text-secondary font-medium">
                     Jun 30, 2025
                   </span>
                 </div>
@@ -109,20 +116,20 @@ export default function EcoSavaari() {
             </ScrollReveal>
 
             <ScrollReveal variant="slideUp" delay={0.2}>
-              <p className="text-xl text-forest leading-relaxed mb-8">
+              <p className="text-xl text-forest dark:text-[#F5F0E1] leading-relaxed mb-8">
                 Eco Savaari is BlueDot's mobile outreach initiative designed to bridge the environmental awareness gap in rural and underserved communities. Using a specially equipped educational van, the program delivers interactive wildlife education sessions to children and youth who have limited access to formal environmental learning.
               </p>
             </ScrollReveal>
 
             <ScrollReveal variant="slideUp" delay={0.4}>
-              <p className="text-lg text-forest leading-relaxed mb-6">
+              <p className="text-lg text-forest dark:text-[#F5F0E1] leading-relaxed mb-6">
                 The van travels district-by-district across Karnataka, transforming open grounds, schoolyards, and village spaces into pop-up classrooms. Through storytelling, visual games, posters, and AV tools, all designed in local languages, Eco Savaari inspires the next generation to understand, respect, and protect their local ecosystems.
               </p>
             </ScrollReveal>
 
             {/* Key Features */}
             <ScrollReveal variant="slideUp" delay={0.6}>
-              <div className="bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-xl p-8 my-12">
+              <div className="bg-white/30 dark:bg-[#0f3433]/50 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-xl p-8 my-12 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-forest dark:text-[#F5F0E1] mb-10">Program Highlights</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[
@@ -157,13 +164,13 @@ export default function EcoSavaari() {
             </ScrollReveal>
 
             <ScrollReveal variant="slideUp" delay={1.0}>
-              <p className="text-lg text-forest leading-relaxed mb-6">
+              <p className="text-lg text-forest dark:text-[#F5F0E1] leading-relaxed mb-6">
                 This initiative addresses key challenges such as misinformation about wildlife, disconnect from nature, and lack of conservation exposure. Children are encouraged to learn through fun, curiosity-driven methods like quiz games, rewards, and real-world examples.
               </p>
             </ScrollReveal>
 
             <ScrollReveal variant="slideUp" delay={1.2}>
-              <p className="text-lg text-forest leading-relaxed mb-6">
+              <p className="text-lg text-forest dark:text-[#F5F0E1] leading-relaxed mb-6">
                 Volunteers and interns assist with logistics, session delivery, and feedback collection, ensuring the program remains community-centric and adaptive to local needs and contexts.
               </p>
             </ScrollReveal>
@@ -213,7 +220,7 @@ export default function EcoSavaari() {
           </ScrollReveal>
 
           <ScrollReveal variant="slideUp" delay={0.2}>
-            <p className="text-xl text-forest mb-8">
+            <p className="text-xl text-forest dark:text-[#F5F0E1] mb-8">
               Help us bring wildlife education to more communities across India.
             </p>
           </ScrollReveal>

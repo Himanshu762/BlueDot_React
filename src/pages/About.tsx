@@ -6,10 +6,9 @@ import { motion } from 'framer-motion';
 import { verticalFloat, slideFromLeft, slideFromRight, scrollFromBottom } from '../utils/customAnimations';
 import CtaSection from '../components/ui/CTASection';
 
-import { useTheme } from '../context/ThemeContext';
+
 
 export default function About() {
-  const { theme } = useTheme();
   const team = [
     {
       name: 'Harsha Tej',
@@ -129,7 +128,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
-              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold mb-8">
+              <span className="inline-block px-6 py-2 bg-[#3551B4]/10 dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold uppercase tracking-wide mb-8">
                 About
               </span>
               <h1 className="text-5xl md:text-6xl font-bold text-forest mb-10">
@@ -153,8 +152,7 @@ export default function About() {
             </ScrollReveal>
             <ScrollReveal>
               <div
-                className="relative aspect-square rounded-2xl flex items-center justify-center border border-transparent dark:border-white/10 overflow-hidden"
-                style={{ backgroundColor: theme === 'dark' ? '#0f3433' : '#3551B4' }}
+                className="relative aspect-square rounded-2xl flex items-center justify-center border border-transparent dark:border-white/10 overflow-hidden bg-[#3551B4] dark:bg-[#0f3433]"
               >
                 <img
                   src="/assets/About_logo.avif"
@@ -207,9 +205,9 @@ export default function About() {
       <section className="py-20 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#e8bb49] rounded-full text-sm font-semibold mb-8">
-              Mission & values
-            </span>
+              <span className="inline-block px-6 py-2 bg-[#3551B4]/10 dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold uppercase tracking-wide mb-8">
+                Mission & values
+              </span>
             <h2 className="text-5xl font-bold text-forest mb-10">
               We're on a mission...
             </h2>
@@ -227,8 +225,7 @@ export default function About() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: index * 0.1 }}
-                className="rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all border border-card"
-                style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+                className="rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all border border-card bg-white/95 dark:bg-[#0f3433]/70"
               >
                 <div className="mb-4 flex justify-center">
                   <img src={card.image} alt={card.title} className="h-16 w-auto object-contain" />
@@ -247,7 +244,7 @@ export default function About() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold mb-8">
+              <span className="inline-block px-6 py-2 bg-[#3551B4]/10 dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold uppercase tracking-wide mb-8">
                 Our Team
               </span>
               <h2 className="text-5xl font-bold text-forest">
@@ -257,8 +254,7 @@ export default function About() {
           </ScrollReveal>
 
           <div
-            className="grid md:grid-cols-2 gap-12 items-center backdrop-blur-md border border-card p-8 rounded-2xl shadow-xl"
-            style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+            className="grid md:grid-cols-2 gap-12 items-center backdrop-blur-md border border-card p-8 rounded-2xl shadow-xl bg-white/95 dark:bg-[#0f3433]/70"
           >
             <motion.div
               variants={slideFromLeft}
@@ -311,8 +307,7 @@ export default function About() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: index * 0.05 }}
-                className="backdrop-blur-md border border-card rounded-xl flex items-center shadow-lg hover:shadow-xl transition-all overflow-hidden h-32"
-                style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+                className="backdrop-blur-md border border-card rounded-xl flex items-center shadow-lg hover:shadow-xl transition-all overflow-hidden h-32 bg-white/95 dark:bg-[#0f3433]/70"
               >
                 <img
                   src={member.image}

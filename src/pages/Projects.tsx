@@ -8,7 +8,7 @@ import CtaSection from '../components/ui/CTASection';
 import { getCategoryColor, categoryTextColor } from '../utils/projectStyles';
 
 // A card component styled to match the design
-import { useTheme } from '../context/ThemeContext';
+
 
 // ... (keep existing imports)
 
@@ -21,14 +21,12 @@ function ProjectCard({ title, description, image, date, category, link }: {
   category: string;
   link: string;
 }) {
-  const { theme } = useTheme();
   return (
     <Link to={link} className="group block">
       <motion.div
         whileHover={{ y: -8 }}
         transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-        className="backdrop-blur-md border border-card rounded-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all h-full flex flex-col"
-        style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+        className="backdrop-blur-md border border-card rounded-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all h-full flex flex-col bg-white/95 dark:bg-[#0f3433]/70"
       >
         <div className="overflow-hidden aspect-video">
           <AnimatedImage
@@ -107,7 +105,7 @@ export default function Projects() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="text-center max-w-4xl mx-auto">
             <ScrollReveal>
-              <span className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold mb-8">
+              <span className="inline-block px-6 py-2 bg-[#3551B4]/10 dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold uppercase tracking-wide mb-8">
                 Projects
               </span>
               <h1 className="text-5xl md:text-6xl font-bold text-forest mb-10">

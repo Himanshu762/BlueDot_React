@@ -15,10 +15,9 @@ declare global {
   }
 }
 
-import { useTheme } from '../context/ThemeContext';
+
 
 export default function Contact() {
-  const { theme } = useTheme();
   const faqs = [
     {
       question: 'How can I volunteer with BlueDot?',
@@ -106,8 +105,8 @@ export default function Contact() {
                 initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any }}
-                className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold mb-8"
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+                className="inline-block px-6 py-2 bg-[#3551B4]/10 dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold uppercase tracking-wide mb-8"
               >
                 Contact us
               </motion.span>
@@ -115,7 +114,7 @@ export default function Contact() {
                 initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.1 }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1], delay: 0.1 }}
                 className="text-5xl md:text-6xl font-bold text-forest mb-10"
               >
                 Join the Movement
@@ -124,7 +123,7 @@ export default function Contact() {
                 initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.2 }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
                 className="text-lg text-forest-light mb-6 leading-relaxed"
               >
                 We're glad you're here. Whether you're an individual looking to volunteer, a student eager to intern, or a partner exploring collaboration — we're here to connect. Share your interest and let's build meaningful impact together. Fill in your details and let's get started.
@@ -133,7 +132,7 @@ export default function Contact() {
                 initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.25 }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1], delay: 0.25 }}
                 className="text-sm text-forest-light/70 mb-12"
               >
                 Legal Entity: One Blu Foundation
@@ -142,7 +141,7 @@ export default function Contact() {
                 initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.3 }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1], delay: 0.3 }}
                 className="text-md text-forest-light mb-6"
               >
                 Not sure where you fit?
@@ -151,7 +150,7 @@ export default function Contact() {
                 initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.4 }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1], delay: 0.4 }}
                 href="https://www.instagram.com/bluedotfoundation"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -165,8 +164,7 @@ export default function Contact() {
             <div className="sticky top-24">
               <ScrollReveal>
                 <div
-                  className="backdrop-blur-md border border-card rounded-2xl p-2 shadow-2xl min-h-[530px]"
-                  style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+                  className="backdrop-blur-md border border-card rounded-2xl p-2 shadow-2xl min-h-[530px] bg-white/95 dark:bg-[#0f3433]/70"
                 >
                   <iframe
                     data-tally-src="https://tally.so/embed/mRQL7p?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
@@ -190,16 +188,15 @@ export default function Contact() {
       <section className="py-20 bg-transparent relative z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
-            className="backdrop-blur-md border border-card rounded-3xl p-8 md:p-12 shadow-xl"
-            style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+            className="backdrop-blur-md border border-card rounded-3xl p-8 md:p-12 shadow-xl bg-white/95 dark:bg-[#0f3433]/70"
           >
             <div className="text-center mb-12">
               <motion.span
                 initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any }}
-                className="inline-block px-4 py-2 bg-[rgba(53,81,180,0.1)] dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold mb-8"
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+                className="inline-block px-6 py-2 bg-[#3551B4]/10 dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold uppercase tracking-wide mb-8"
               >
                 FAQ
               </motion.span>
@@ -207,7 +204,7 @@ export default function Contact() {
                 initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.1 }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1], delay: 0.1 }}
                 className="text-4xl font-bold text-forest mb-8"
               >
                 Frequently asked questions
@@ -216,7 +213,7 @@ export default function Contact() {
                 initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as any, delay: 0.2 }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
                 className="text-lg text-forest-light"
               >
                 Here are the top questions our clients ask before getting started.

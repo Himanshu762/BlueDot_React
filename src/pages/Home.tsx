@@ -10,9 +10,7 @@ import ScrollingImageGrid from '../components/ui/ScrollingImageGrid';
 import OrganicBlob from '../components/ui/OrganicBlob';
 import MagneticButton from '../components/ui/MagneticButton';
 import OrbitingArrowButton from '../components/ui/OrbitingArrowButton';
-import { imageZoomOutReveal } from '../utils/customAnimations';
-import { getCategoryColor, categoryTextColor } from '../utils/projectStyles';
-import { useTheme } from '../context/ThemeContext';
+import { categoryTextColor, getCategoryColor } from '../utils/projectStyles';
 
 // Enhanced Project Card
 function ProjectCard({ title, description, image, date, category, link }: {
@@ -23,18 +21,10 @@ function ProjectCard({ title, description, image, date, category, link }: {
   category: string;
   link: string;
 }) {
-  const { theme } = useTheme();
   return (
     <Link to={link} className="group block relative">
       <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={imageZoomOutReveal}
-        whileHover="hover"
-        animate="rest"
-        className="backdrop-blur-md border border-card rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
-        style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+        className="backdrop-blur-md border border-card rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 bg-white/95 dark:bg-[#0f3433]/70"
       >
         <div className="overflow-hidden aspect-[4/3] relative">
           <AnimatedImage
@@ -69,7 +59,6 @@ function ProjectCard({ title, description, image, date, category, link }: {
 }
 
 export default function Home() {
-  const { theme } = useTheme();
   const projects = [
     {
       title: 'Eco Savaari',
@@ -273,7 +262,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal variant="slideUp">
-              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-8">
+              <span className="inline-block px-6 py-2 bg-[#3551B4]/10 dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold uppercase tracking-wide mb-8">
                 About
               </span>
             </ScrollReveal>
@@ -299,7 +288,7 @@ export default function Home() {
           <ScrollReveal variant="fadeIn">
             <div className="flex flex-col items-center mb-24">
               <div className="h-16 w-px bg-forest-light/20 dark:bg-white/10 mb-8"></div>
-              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide">
+              <span className="inline-block px-6 py-2 bg-[#3551B4]/10 dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold uppercase tracking-wide">
                 TRUSTED BY
               </span>
             </div>
@@ -310,8 +299,7 @@ export default function Home() {
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="w-48 h-28 flex items-center justify-center p-2 backdrop-blur-sm border border-card rounded-xl transition-all duration-300"
-                style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+                className="w-48 h-28 flex items-center justify-center p-2 backdrop-blur-sm border border-card rounded-xl transition-all duration-300 bg-white/95 dark:bg-[#0f3433]/70"
               >
                 <img
                   src={partner.logo}
@@ -330,7 +318,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-12 items-start relative z-10">
           <div className="lg:col-span-1 lg:sticky lg:top-32">
             <ScrollReveal variant="slideUp">
-              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-4">
+              <span className="inline-block px-6 py-2 bg-[#3551B4]/10 dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold uppercase tracking-wide mb-4">
                 OUR SERVICES
               </span>
               <h2 className="text-4xl lg:text-5xl font-bold text-forest mt-4 mb-10">
@@ -348,8 +336,7 @@ export default function Home() {
                   <motion.div
                     whileHover="hover"
                     animate="rest"
-                    className="backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-card"
-                    style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+                    className="backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-card bg-white/95 dark:bg-[#0f3433]/70"
                   >
                     <div className="overflow-hidden relative">
                       <AnimatedImage
@@ -385,7 +372,7 @@ export default function Home() {
           <ScrollReveal variant="slideUp">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
               <div>
-                <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-3">ALL PROJECTS</span>
+                <span className="inline-block px-6 py-2 bg-[#3551B4]/10 dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold uppercase tracking-wide mb-3">ALL PROJECTS</span>
                 <h2 className="text-4xl lg:text-5xl font-bold text-forest mt-3 mb-8 max-w-2xl">
                   Restoring ecosystems to secure tomorrow's climate
                 </h2>
@@ -424,7 +411,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal variant="slideUp">
             <div className="text-center mb-12">
-              <span className="inline-block px-6 py-2 bg-[#3c4faf] text-[#f3ecd9] rounded-full text-sm font-semibold uppercase tracking-wide mb-4">
+              <span className="inline-block px-6 py-2 bg-[#3551B4]/10 dark:bg-[#3c4faf]/20 text-[#3551B4] dark:text-[#3c4faf] rounded-full text-sm font-semibold uppercase tracking-wide mb-4">
                 FAQ
               </span>
               <h2 className="text-4xl font-bold text-forest my-8">
@@ -446,8 +433,7 @@ export default function Home() {
 
         <div className="max-w-[95%] xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div
-            className="backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-card grid lg:grid-cols-2 gap-0"
-            style={{ backgroundColor: theme === 'dark' ? 'rgba(15, 52, 51, 0.7)' : 'rgba(255, 255, 255, 0.95)' }}
+            className="backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-card grid lg:grid-cols-2 gap-0 bg-white/95 dark:bg-[#0f3433]/70"
           >
             <div className="p-8 md:p-16 flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
               <ScrollReveal variant="slideUp">

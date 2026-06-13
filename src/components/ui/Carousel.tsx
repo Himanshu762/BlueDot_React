@@ -97,7 +97,7 @@ export default function Carousel({
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollPrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-md rounded-full shadow-lg flex items-center justify-center text-[rgb(19,38,27)] hover:bg-[rgb(238,185,42)] transition-colors"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 dark:bg-[#0f3433]/90 backdrop-blur-md rounded-full shadow-lg flex items-center justify-center text-forest dark:text-[#F5F0E1] hover:bg-[#e8bb49] dark:hover:bg-[#e8bb49] dark:hover:text-forest transition-colors"
             aria-label="Previous slide"
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -109,7 +109,7 @@ export default function Carousel({
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-md rounded-full shadow-lg flex items-center justify-center text-[rgb(19,38,27)] hover:bg-[rgb(238,185,42)] transition-colors"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 dark:bg-[#0f3433]/90 backdrop-blur-md rounded-full shadow-lg flex items-center justify-center text-forest dark:text-[#F5F0E1] hover:bg-[#e8bb49] dark:hover:bg-[#e8bb49] dark:hover:text-forest transition-colors"
             aria-label="Next slide"
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -128,8 +128,8 @@ export default function Carousel({
               onClick={() => scrollTo(index)}
               className={`transition-all duration-300 ${
                 index === selectedIndex
-                  ? 'w-8 h-2 bg-[rgb(238,185,42)]'
-                  : 'w-2 h-2 bg-[rgb(94,107,100)] hover:bg-[rgb(19,38,27)]'
+                  ? 'w-8 h-2 bg-[#e8bb49]'
+                  : 'w-2 h-2 bg-forest-light dark:bg-white/40 hover:bg-forest dark:hover:bg-white'
               } rounded-full`}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -202,7 +202,7 @@ export function ThumbnailCarousel({ thumbnails, ...props }: ThumbnailCarouselPro
                 onClick={() => onThumbClick(index)}
                 className={`flex-[0_0_20%] min-w-0 rounded-lg overflow-hidden transition-all duration-300 ${
                   index === selectedIndex
-                    ? 'ring-2 ring-[rgb(238,185,42)] opacity-100'
+                    ? 'ring-2 ring-[#e8bb49] opacity-100'
                     : 'opacity-60 hover:opacity-100'
                 }`}
               >
