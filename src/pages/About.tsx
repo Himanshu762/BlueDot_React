@@ -29,12 +29,7 @@ export default function About() {
       image: '/assets/About_vishlesh.png',
       isFounder: false
     },
-    {
-      name: 'Chetan S Murthy',
-      role: 'Core Team',
-      image: '/assets/About_cheta.avif',
-      isFounder: false
-    },
+
     {
       name: 'Amit Shroff',
       role: 'Core Team',
@@ -47,18 +42,7 @@ export default function About() {
       image: '/assets/About_rammohan.avif',
       isFounder: false
     },
-    {
-      name: 'Shreya Asrani',
-      role: 'Core Team',
-      image: '/assets/About_shreya.avif',
-      isFounder: false
-    },
-    {
-      name: 'Deepika Appaiah',
-      role: 'Core Team',
-      image: '/assets/About_deepika.avif',
-      isFounder: false
-    },
+
     {
       name: 'Rahul Aradhya',
       role: 'Core Team',
@@ -71,12 +55,7 @@ export default function About() {
       image: '/assets/About_Himanshu.avif',
       isFounder: false
     },
-    {
-      name: 'Renuka Kulkarni',
-      role: 'Core Team',
-      image: '/assets/About_renuka.avif',
-      isFounder: false
-    },
+
     {
       name: 'Hitesh R J',
       role: 'Core Team',
