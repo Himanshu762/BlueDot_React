@@ -74,12 +74,7 @@ export default function About() {
       image: '/assets/Abotu_sachin.png',
       isFounder: false
     },
-    {
-      name: 'Sruthi G',
-      role: 'Core Team',
-      image: '/assets/About_sruthi.png',
-      isFounder: false
-    },
+
     {
       name: 'Babu Chandra',
       role: 'Core Team',
